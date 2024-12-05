@@ -310,12 +310,13 @@ function GetAuthorizationUrl($provider) {
     $codeChallenge = generateCodeChallenge($codeVerifier);
 
     $authorizationUrl = $provider->getAuthorizationUrl([
+        'state' => 'random_state_string',
         'code_challenge' => $codeChallenge,
         'code_challenge_method' => 'S256',
     ]);
 
-    print_r($authorizationUrl);
-    print_r($codeVerifier);
+    echo 'Authorization URL: ' . $authorizationUrl . "\n";
+    echo 'Code verifier: ' . $codeVerifier . "\n";
 }
 
 // Step 2: Handle the callback and exchange the authorization code for an access token
@@ -327,9 +328,9 @@ function GetAccessTokenFromCode($provider, $authorizationCode, $codeVerifier) {
             'code_verifier' => $codeVerifier
         ]);
 
-        echo 'Access Token: ' . $accessToken->getToken();
-        echo 'Expires in: ' . $accessToken->getExpires();
-        echo 'New Refresh Token: ' . $accessToken->getRefreshToken();
+        echo 'Access Token: ' . $accessToken->getToken() . "\n";
+        echo 'Expires in: ' . $accessToken->getExpires() . "\n";
+        echo 'New Refresh Token: ' . $accessToken->getRefreshToken() . "\n";
     } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
         echo 'Error: ' . $e->getMessage();
     }
