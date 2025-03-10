@@ -9,7 +9,6 @@ docs/Api/CommandesApi.md
 docs/Api/FormulairesApi.md
 docs/Api/ListeDeValeursApi.md
 docs/Api/OrganisationApi.md
-docs/Api/OrganizationApi.md
 docs/Api/PaiementsApi.md
 docs/Api/PartenairesApi.md
 docs/Api/ReusFiscauxApi.md
@@ -120,7 +119,6 @@ lib/Api/CommandesApi.php
 lib/Api/FormulairesApi.php
 lib/Api/ListeDeValeursApi.php
 lib/Api/OrganisationApi.php
-lib/Api/OrganizationApi.php
 lib/Api/PaiementsApi.php
 lib/Api/PartenairesApi.php
 lib/Api/ReusFiscauxApi.php
@@ -230,5 +228,3 @@ lib/Model/ResultsWithPaginationModelSynchronizableFormModel.php
 lib/Model/ResultsWithPaginationModelSynchronizableOrganizationModel.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/OrganizationApiTest.php
-test/Api/ReusFiscauxApiTest.php
