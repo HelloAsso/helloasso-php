@@ -1,13 +1,20 @@
 {
-    "name": "helloasso/helloasso-php",
-    "version": "1.0.0",
-    "description": "HelloAsso API wrapper",
-    "homepage": "https://dev.helloasso.com/",
-    "license": "GPL-3.0-only",
+    "description": "HelloAsso auto-generated SDK",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "HelloAsso and contributors",
-            "homepage": "https://github.com/HelloAsso/helloasso-php/graphs/contributors"
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
