@@ -9,11 +9,11 @@ docs/Api/CommandesApi.md
 docs/Api/FormulairesApi.md
 docs/Api/ListeDeValeursApi.md
 docs/Api/OrganisationApi.md
-docs/Api/OrganizationLegalInformationsApi.md
+docs/Api/OrganizationApi.md
 docs/Api/PaiementsApi.md
 docs/Api/PartenairesApi.md
+docs/Api/ReusFiscauxApi.md
 docs/Api/TagsApi.md
-docs/Api/TaxReceiptApi.md
 docs/Api/UtilisateursApi.md
 docs/Model/HaTrustContractLegalInformationAddressAddressDto.md
 docs/Model/HelloAssoApiV5ModelsAccountCompanyLegalStatusModel.md
@@ -120,11 +120,11 @@ lib/Api/CommandesApi.php
 lib/Api/FormulairesApi.php
 lib/Api/ListeDeValeursApi.php
 lib/Api/OrganisationApi.php
-lib/Api/OrganizationLegalInformationsApi.php
+lib/Api/OrganizationApi.php
 lib/Api/PaiementsApi.php
 lib/Api/PartenairesApi.php
+lib/Api/ReusFiscauxApi.php
 lib/Api/TagsApi.php
-lib/Api/TaxReceiptApi.php
 lib/Api/UtilisateursApi.php
 lib/ApiException.php
 lib/Configuration.php
@@ -230,7 +230,5 @@ lib/Model/ResultsWithPaginationModelSynchronizableFormModel.php
 lib/Model/ResultsWithPaginationModelSynchronizableOrganizationModel.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/HaTrustContractLegalInformationAddressAddressDtoTest.php
-test/Model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBodyTest.php
-test/Model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfigurationTest.php
-test/Model/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOptionTest.php
+test/Api/OrganizationApiTest.php
+test/Api/ReusFiscauxApiTest.php

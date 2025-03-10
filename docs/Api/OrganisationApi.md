@@ -5,8 +5,8 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**organizationsLegalInformationsLegalStructuresGet()**](OrganisationApi.md#organizationsLegalInformationsLegalStructuresGet) | **GET** /organizations/legal-informations/legal-structures | Obtenir la structure juridique d&#39;une organisation visible. |
-| [**organizationsLegalInformationsOrganizationSlugConfigurationGet()**](OrganisationApi.md#organizationsLegalInformationsOrganizationSlugConfigurationGet) | **GET** /organizations/legal-informations/{organizationSlug}/configuration |  |
-| [**organizationsLegalInformationsTaxInformationTextsGet()**](OrganisationApi.md#organizationsLegalInformationsTaxInformationTextsGet) | **GET** /organizations/legal-informations/tax-information-texts |  |
+| [**organizationsLegalInformationsOrganizationSlugConfigurationGet()**](OrganisationApi.md#organizationsLegalInformationsOrganizationSlugConfigurationGet) | **GET** /organizations/legal-informations/{organizationSlug}/configuration | Obtenir la configuration des informations juridiques de l&#39;organisation. |
+| [**organizationsLegalInformationsTaxInformationTextsGet()**](OrganisationApi.md#organizationsLegalInformationsTaxInformationTextsGet) | **GET** /organizations/legal-informations/tax-information-texts | Obtenir les textes d&#39;information fiscale de l&#39;organisation. |
 | [**organizationsOrganizationSlugGet()**](OrganisationApi.md#organizationsOrganizationSlugGet) | **GET** /organizations/{organizationSlug} | Obtenir le détail d&#39;une organisation |
 
 
@@ -73,7 +73,7 @@ This endpoint does not need any parameter.
 organizationsLegalInformationsOrganizationSlugConfigurationGet($organization_slug): \OpenAPI\Client\Model\HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration
 ```
 
-
+Obtenir la configuration des informations juridiques de l'organisation.
 
 <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
 
@@ -133,7 +133,7 @@ try {
 organizationsLegalInformationsTaxInformationTextsGet($organization_slug): \OpenAPI\Client\Model\HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText[]
 ```
 
-
+Obtenir les textes d'information fiscale de l'organisation.
 
 <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
 

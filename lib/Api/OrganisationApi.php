@@ -426,7 +426,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationGet
      *
-     * 
+     * Obtenir la configuration des informations juridiques de l&#39;organisation.
      *
      * @param  string $organization_slug organization_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationGet'] to see the possible values for this operation
@@ -444,7 +444,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationGetWithHttpInfo
      *
-     * 
+     * Obtenir la configuration des informations juridiques de l&#39;organisation.
      *
      * @param  string $organization_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationGet'] to see the possible values for this operation
@@ -569,7 +569,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationGetAsync
      *
-     * 
+     * Obtenir la configuration des informations juridiques de l&#39;organisation.
      *
      * @param  string $organization_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationGet'] to see the possible values for this operation
@@ -590,7 +590,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationGetAsyncWithHttpInfo
      *
-     * 
+     * Obtenir la configuration des informations juridiques de l&#39;organisation.
      *
      * @param  string $organization_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationGet'] to see the possible values for this operation
@@ -738,7 +738,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsTaxInformationTextsGet
      *
-     * 
+     * Obtenir les textes d&#39;information fiscale de l&#39;organisation.
      *
      * @param  string|null $organization_slug organization_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsTaxInformationTextsGet'] to see the possible values for this operation
@@ -756,7 +756,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsTaxInformationTextsGetWithHttpInfo
      *
-     * 
+     * Obtenir les textes d&#39;information fiscale de l&#39;organisation.
      *
      * @param  string|null $organization_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsTaxInformationTextsGet'] to see the possible values for this operation
@@ -881,7 +881,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsTaxInformationTextsGetAsync
      *
-     * 
+     * Obtenir les textes d&#39;information fiscale de l&#39;organisation.
      *
      * @param  string|null $organization_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsTaxInformationTextsGet'] to see the possible values for this operation
@@ -902,7 +902,7 @@ class OrganisationApi
     /**
      * Operation organizationsLegalInformationsTaxInformationTextsGetAsyncWithHttpInfo
      *
-     * 
+     * Obtenir les textes d&#39;information fiscale de l&#39;organisation.
      *
      * @param  string|null $organization_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsTaxInformationTextsGet'] to see the possible values for this operation
