@@ -1834,8 +1834,8 @@ class PaiementsApi
      * @param  int $payment_id The payment identifier. (required)
      * @param  string|null $comment The comment about this refund. (optional)
      * @param  bool|null $cancel_order Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) (optional, default to false)
-     * @param  bool|null $send_refund_mail Whether a refund mail must be send or not. (optional, default to true)
-     * @param  int|null $amount The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
+     * @param  bool|null $send_refund_mail Whether a refund mail must be sent or not. (optional, default to true)
+     * @param  int|null $amount The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsPaymentIdRefundPost'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1856,8 +1856,8 @@ class PaiementsApi
      * @param  int $payment_id The payment identifier. (required)
      * @param  string|null $comment The comment about this refund. (optional)
      * @param  bool|null $cancel_order Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) (optional, default to false)
-     * @param  bool|null $send_refund_mail Whether a refund mail must be send or not. (optional, default to true)
-     * @param  int|null $amount The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
+     * @param  bool|null $send_refund_mail Whether a refund mail must be sent or not. (optional, default to true)
+     * @param  int|null $amount The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsPaymentIdRefundPost'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1985,8 +1985,8 @@ class PaiementsApi
      * @param  int $payment_id The payment identifier. (required)
      * @param  string|null $comment The comment about this refund. (optional)
      * @param  bool|null $cancel_order Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) (optional, default to false)
-     * @param  bool|null $send_refund_mail Whether a refund mail must be send or not. (optional, default to true)
-     * @param  int|null $amount The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
+     * @param  bool|null $send_refund_mail Whether a refund mail must be sent or not. (optional, default to true)
+     * @param  int|null $amount The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsPaymentIdRefundPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2010,8 +2010,8 @@ class PaiementsApi
      * @param  int $payment_id The payment identifier. (required)
      * @param  string|null $comment The comment about this refund. (optional)
      * @param  bool|null $cancel_order Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) (optional, default to false)
-     * @param  bool|null $send_refund_mail Whether a refund mail must be send or not. (optional, default to true)
-     * @param  int|null $amount The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
+     * @param  bool|null $send_refund_mail Whether a refund mail must be sent or not. (optional, default to true)
+     * @param  int|null $amount The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsPaymentIdRefundPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2064,8 +2064,8 @@ class PaiementsApi
      * @param  int $payment_id The payment identifier. (required)
      * @param  string|null $comment The comment about this refund. (optional)
      * @param  bool|null $cancel_order Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) (optional, default to false)
-     * @param  bool|null $send_refund_mail Whether a refund mail must be send or not. (optional, default to true)
-     * @param  int|null $amount The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
+     * @param  bool|null $send_refund_mail Whether a refund mail must be sent or not. (optional, default to true)
+     * @param  int|null $amount The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded (optional, default to 0)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsPaymentIdRefundPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

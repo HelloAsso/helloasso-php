@@ -165,7 +165,7 @@ class HelloAssoApiV5ModelsFormsFormQuickCreateRequest implements ModelInterface,
         'sale_start_date' => true,
         'validity_type' => false,
         'accept_open_donation' => false,
-        'accept_open_monthly_donation' => true,
+        'accept_open_monthly_donation' => false,
         'allow_comment' => false,
         'amount_visible' => false,
         'color' => true,
@@ -1036,14 +1036,7 @@ class HelloAssoApiV5ModelsFormsFormQuickCreateRequest implements ModelInterface,
     public function setAcceptOpenMonthlyDonation($accept_open_monthly_donation)
     {
         if (is_null($accept_open_monthly_donation)) {
-            array_push($this->openAPINullablesSetToNull, 'accept_open_monthly_donation');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('accept_open_monthly_donation', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable accept_open_monthly_donation cannot be null');
         }
         $this->container['accept_open_monthly_donation'] = $accept_open_monthly_donation;
 

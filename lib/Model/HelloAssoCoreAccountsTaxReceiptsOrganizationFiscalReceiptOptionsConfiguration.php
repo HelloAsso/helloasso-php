@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody
+ * HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody Class Doc Comment
+ * HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'HelloAsso.Api.V5.Models.OrganizationLegalInformations.UpdateOrganizationLegalInformationConfigurationBody';
+    protected static $openAPIModelName = 'HelloAsso.Core.Accounts.TaxReceipts.OrganizationFiscalReceiptOptionsConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'legal_structure_id' => 'int',
-        'is_coluche' => 'bool',
-        'allow_ifi_tax_reductions' => 'bool'
+        'purpose' => 'string',
+        'cerfa_type_id' => 'int',
+        'jo_category_id' => 'int',
+        'format_option_model' => '\OpenAPI\Client\Model\HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption',
+        'signatory_model' => '\OpenAPI\Client\Model\HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel',
+        'address_model' => '\OpenAPI\Client\Model\HaTrustContractLegalInformationAddressAddressDto'
     ];
 
     /**
@@ -70,9 +73,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'legal_structure_id' => 'int32',
-        'is_coluche' => null,
-        'allow_ifi_tax_reductions' => null
+        'purpose' => null,
+        'cerfa_type_id' => 'int32',
+        'jo_category_id' => 'int32',
+        'format_option_model' => null,
+        'signatory_model' => null,
+        'address_model' => null
     ];
 
     /**
@@ -81,9 +87,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'legal_structure_id' => false,
-        'is_coluche' => false,
-        'allow_ifi_tax_reductions' => false
+        'purpose' => true,
+        'cerfa_type_id' => true,
+        'jo_category_id' => true,
+        'format_option_model' => false,
+        'signatory_model' => false,
+        'address_model' => false
     ];
 
     /**
@@ -172,9 +181,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $attributeMap = [
-        'legal_structure_id' => 'legalStructureId',
-        'is_coluche' => 'isColuche',
-        'allow_ifi_tax_reductions' => 'allowIfiTaxReductions'
+        'purpose' => 'purpose',
+        'cerfa_type_id' => 'cerfaTypeId',
+        'jo_category_id' => 'joCategoryId',
+        'format_option_model' => 'formatOptionModel',
+        'signatory_model' => 'signatoryModel',
+        'address_model' => 'addressModel'
     ];
 
     /**
@@ -183,9 +195,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $setters = [
-        'legal_structure_id' => 'setLegalStructureId',
-        'is_coluche' => 'setIsColuche',
-        'allow_ifi_tax_reductions' => 'setAllowIfiTaxReductions'
+        'purpose' => 'setPurpose',
+        'cerfa_type_id' => 'setCerfaTypeId',
+        'jo_category_id' => 'setJoCategoryId',
+        'format_option_model' => 'setFormatOptionModel',
+        'signatory_model' => 'setSignatoryModel',
+        'address_model' => 'setAddressModel'
     ];
 
     /**
@@ -194,9 +209,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $getters = [
-        'legal_structure_id' => 'getLegalStructureId',
-        'is_coluche' => 'getIsColuche',
-        'allow_ifi_tax_reductions' => 'getAllowIfiTaxReductions'
+        'purpose' => 'getPurpose',
+        'cerfa_type_id' => 'getCerfaTypeId',
+        'jo_category_id' => 'getJoCategoryId',
+        'format_option_model' => 'getFormatOptionModel',
+        'signatory_model' => 'getSignatoryModel',
+        'address_model' => 'getAddressModel'
     ];
 
     /**
@@ -256,9 +274,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('legal_structure_id', $data ?? [], null);
-        $this->setIfExists('is_coluche', $data ?? [], null);
-        $this->setIfExists('allow_ifi_tax_reductions', $data ?? [], null);
+        $this->setIfExists('purpose', $data ?? [], null);
+        $this->setIfExists('cerfa_type_id', $data ?? [], null);
+        $this->setIfExists('jo_category_id', $data ?? [], null);
+        $this->setIfExists('format_option_model', $data ?? [], null);
+        $this->setIfExists('signatory_model', $data ?? [], null);
+        $this->setIfExists('address_model', $data ?? [], null);
     }
 
     /**
@@ -288,15 +309,6 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
     {
         $invalidProperties = [];
 
-        if ($this->container['legal_structure_id'] === null) {
-            $invalidProperties[] = "'legal_structure_id' can't be null";
-        }
-        if ($this->container['is_coluche'] === null) {
-            $invalidProperties[] = "'is_coluche' can't be null";
-        }
-        if ($this->container['allow_ifi_tax_reductions'] === null) {
-            $invalidProperties[] = "'allow_ifi_tax_reductions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -313,82 +325,184 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
 
 
     /**
-     * Gets legal_structure_id
+     * Gets purpose
      *
-     * @return int
+     * @return string|null
      */
-    public function getLegalStructureId()
+    public function getPurpose()
     {
-        return $this->container['legal_structure_id'];
+        return $this->container['purpose'];
     }
 
     /**
-     * Sets legal_structure_id
+     * Sets purpose
      *
-     * @param int $legal_structure_id legal_structure_id
+     * @param string|null $purpose purpose
      *
      * @return self
      */
-    public function setLegalStructureId($legal_structure_id)
+    public function setPurpose($purpose)
     {
-        if (is_null($legal_structure_id)) {
-            throw new \InvalidArgumentException('non-nullable legal_structure_id cannot be null');
+        if (is_null($purpose)) {
+            array_push($this->openAPINullablesSetToNull, 'purpose');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('purpose', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['legal_structure_id'] = $legal_structure_id;
+        $this->container['purpose'] = $purpose;
 
         return $this;
     }
 
     /**
-     * Gets is_coluche
+     * Gets cerfa_type_id
      *
-     * @return bool
+     * @return int|null
      */
-    public function getIsColuche()
+    public function getCerfaTypeId()
     {
-        return $this->container['is_coluche'];
+        return $this->container['cerfa_type_id'];
     }
 
     /**
-     * Sets is_coluche
+     * Sets cerfa_type_id
      *
-     * @param bool $is_coluche is_coluche
+     * @param int|null $cerfa_type_id cerfa_type_id
      *
      * @return self
      */
-    public function setIsColuche($is_coluche)
+    public function setCerfaTypeId($cerfa_type_id)
     {
-        if (is_null($is_coluche)) {
-            throw new \InvalidArgumentException('non-nullable is_coluche cannot be null');
+        if (is_null($cerfa_type_id)) {
+            array_push($this->openAPINullablesSetToNull, 'cerfa_type_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('cerfa_type_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['is_coluche'] = $is_coluche;
+        $this->container['cerfa_type_id'] = $cerfa_type_id;
 
         return $this;
     }
 
     /**
-     * Gets allow_ifi_tax_reductions
+     * Gets jo_category_id
      *
-     * @return bool
+     * @return int|null
      */
-    public function getAllowIfiTaxReductions()
+    public function getJoCategoryId()
     {
-        return $this->container['allow_ifi_tax_reductions'];
+        return $this->container['jo_category_id'];
     }
 
     /**
-     * Sets allow_ifi_tax_reductions
+     * Sets jo_category_id
      *
-     * @param bool $allow_ifi_tax_reductions allow_ifi_tax_reductions
+     * @param int|null $jo_category_id jo_category_id
      *
      * @return self
      */
-    public function setAllowIfiTaxReductions($allow_ifi_tax_reductions)
+    public function setJoCategoryId($jo_category_id)
     {
-        if (is_null($allow_ifi_tax_reductions)) {
-            throw new \InvalidArgumentException('non-nullable allow_ifi_tax_reductions cannot be null');
+        if (is_null($jo_category_id)) {
+            array_push($this->openAPINullablesSetToNull, 'jo_category_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('jo_category_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['allow_ifi_tax_reductions'] = $allow_ifi_tax_reductions;
+        $this->container['jo_category_id'] = $jo_category_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets format_option_model
+     *
+     * @return \OpenAPI\Client\Model\HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption|null
+     */
+    public function getFormatOptionModel()
+    {
+        return $this->container['format_option_model'];
+    }
+
+    /**
+     * Sets format_option_model
+     *
+     * @param \OpenAPI\Client\Model\HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption|null $format_option_model format_option_model
+     *
+     * @return self
+     */
+    public function setFormatOptionModel($format_option_model)
+    {
+        if (is_null($format_option_model)) {
+            throw new \InvalidArgumentException('non-nullable format_option_model cannot be null');
+        }
+        $this->container['format_option_model'] = $format_option_model;
+
+        return $this;
+    }
+
+    /**
+     * Gets signatory_model
+     *
+     * @return \OpenAPI\Client\Model\HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel|null
+     */
+    public function getSignatoryModel()
+    {
+        return $this->container['signatory_model'];
+    }
+
+    /**
+     * Sets signatory_model
+     *
+     * @param \OpenAPI\Client\Model\HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel|null $signatory_model signatory_model
+     *
+     * @return self
+     */
+    public function setSignatoryModel($signatory_model)
+    {
+        if (is_null($signatory_model)) {
+            throw new \InvalidArgumentException('non-nullable signatory_model cannot be null');
+        }
+        $this->container['signatory_model'] = $signatory_model;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_model
+     *
+     * @return \OpenAPI\Client\Model\HaTrustContractLegalInformationAddressAddressDto|null
+     */
+    public function getAddressModel()
+    {
+        return $this->container['address_model'];
+    }
+
+    /**
+     * Sets address_model
+     *
+     * @param \OpenAPI\Client\Model\HaTrustContractLegalInformationAddressAddressDto|null $address_model address_model
+     *
+     * @return self
+     */
+    public function setAddressModel($address_model)
+    {
+        if (is_null($address_model)) {
+            throw new \InvalidArgumentException('non-nullable address_model cannot be null');
+        }
+        $this->container['address_model'] = $address_model;
 
         return $this;
     }

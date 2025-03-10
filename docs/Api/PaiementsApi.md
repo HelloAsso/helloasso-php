@@ -350,8 +350,8 @@ $apiInstance = new OpenAPI\Client\Api\PaiementsApi(
 $payment_id = 56; // int | The payment identifier.
 $comment = 'comment_example'; // string | The comment about this refund.
 $cancel_order = false; // bool | Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded)
-$send_refund_mail = true; // bool | Whether a refund mail must be send or not.
-$amount = 0; // int | The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+$send_refund_mail = true; // bool | Whether a refund mail must be sent or not.
+$amount = 0; // int | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
 
 try {
     $result = $apiInstance->paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount);
@@ -368,8 +368,8 @@ try {
 | **payment_id** | **int**| The payment identifier. | |
 | **comment** | **string**| The comment about this refund. | [optional] |
 | **cancel_order** | **bool**| Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) | [optional] [default to false] |
-| **send_refund_mail** | **bool**| Whether a refund mail must be send or not. | [optional] [default to true] |
-| **amount** | **int**| The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0] |
+| **send_refund_mail** | **bool**| Whether a refund mail must be sent or not. | [optional] [default to true] |
+| **amount** | **int**| The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0] |
 
 ### Return type
 

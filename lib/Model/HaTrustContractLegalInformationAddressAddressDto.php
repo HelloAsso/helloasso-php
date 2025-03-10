@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody
+ * HaTrustContractLegalInformationAddressAddressDto
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody Class Doc Comment
+ * HaTrustContractLegalInformationAddressAddressDto Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class HaTrustContractLegalInformationAddressAddressDto implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'HelloAsso.Api.V5.Models.OrganizationLegalInformations.UpdateOrganizationLegalInformationConfigurationBody';
+    protected static $openAPIModelName = 'HaTrust.Contract.LegalInformation.Address.AddressDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'legal_structure_id' => 'int',
-        'is_coluche' => 'bool',
-        'allow_ifi_tax_reductions' => 'bool'
+        'line' => 'string',
+        'city' => 'string',
+        'zip_code' => 'string',
+        'country' => 'int',
+        'country_name' => 'string',
+        'country_alpha3' => 'string'
     ];
 
     /**
@@ -70,9 +73,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'legal_structure_id' => 'int32',
-        'is_coluche' => null,
-        'allow_ifi_tax_reductions' => null
+        'line' => null,
+        'city' => null,
+        'zip_code' => null,
+        'country' => 'int32',
+        'country_name' => null,
+        'country_alpha3' => null
     ];
 
     /**
@@ -81,9 +87,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'legal_structure_id' => false,
-        'is_coluche' => false,
-        'allow_ifi_tax_reductions' => false
+        'line' => true,
+        'city' => true,
+        'zip_code' => true,
+        'country' => true,
+        'country_name' => true,
+        'country_alpha3' => true
     ];
 
     /**
@@ -172,9 +181,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $attributeMap = [
-        'legal_structure_id' => 'legalStructureId',
-        'is_coluche' => 'isColuche',
-        'allow_ifi_tax_reductions' => 'allowIfiTaxReductions'
+        'line' => 'line',
+        'city' => 'city',
+        'zip_code' => 'zipCode',
+        'country' => 'country',
+        'country_name' => 'countryName',
+        'country_alpha3' => 'countryAlpha3'
     ];
 
     /**
@@ -183,9 +195,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $setters = [
-        'legal_structure_id' => 'setLegalStructureId',
-        'is_coluche' => 'setIsColuche',
-        'allow_ifi_tax_reductions' => 'setAllowIfiTaxReductions'
+        'line' => 'setLine',
+        'city' => 'setCity',
+        'zip_code' => 'setZipCode',
+        'country' => 'setCountry',
+        'country_name' => 'setCountryName',
+        'country_alpha3' => 'setCountryAlpha3'
     ];
 
     /**
@@ -194,9 +209,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $getters = [
-        'legal_structure_id' => 'getLegalStructureId',
-        'is_coluche' => 'getIsColuche',
-        'allow_ifi_tax_reductions' => 'getAllowIfiTaxReductions'
+        'line' => 'getLine',
+        'city' => 'getCity',
+        'zip_code' => 'getZipCode',
+        'country' => 'getCountry',
+        'country_name' => 'getCountryName',
+        'country_alpha3' => 'getCountryAlpha3'
     ];
 
     /**
@@ -256,9 +274,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('legal_structure_id', $data ?? [], null);
-        $this->setIfExists('is_coluche', $data ?? [], null);
-        $this->setIfExists('allow_ifi_tax_reductions', $data ?? [], null);
+        $this->setIfExists('line', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('zip_code', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
+        $this->setIfExists('country_name', $data ?? [], null);
+        $this->setIfExists('country_alpha3', $data ?? [], null);
     }
 
     /**
@@ -288,15 +309,6 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
     {
         $invalidProperties = [];
 
-        if ($this->container['legal_structure_id'] === null) {
-            $invalidProperties[] = "'legal_structure_id' can't be null";
-        }
-        if ($this->container['is_coluche'] === null) {
-            $invalidProperties[] = "'is_coluche' can't be null";
-        }
-        if ($this->container['allow_ifi_tax_reductions'] === null) {
-            $invalidProperties[] = "'allow_ifi_tax_reductions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -313,82 +325,205 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
 
 
     /**
-     * Gets legal_structure_id
+     * Gets line
      *
-     * @return int
+     * @return string|null
      */
-    public function getLegalStructureId()
+    public function getLine()
     {
-        return $this->container['legal_structure_id'];
+        return $this->container['line'];
     }
 
     /**
-     * Sets legal_structure_id
+     * Sets line
      *
-     * @param int $legal_structure_id legal_structure_id
+     * @param string|null $line line
      *
      * @return self
      */
-    public function setLegalStructureId($legal_structure_id)
+    public function setLine($line)
     {
-        if (is_null($legal_structure_id)) {
-            throw new \InvalidArgumentException('non-nullable legal_structure_id cannot be null');
+        if (is_null($line)) {
+            array_push($this->openAPINullablesSetToNull, 'line');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('line', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['legal_structure_id'] = $legal_structure_id;
+        $this->container['line'] = $line;
 
         return $this;
     }
 
     /**
-     * Gets is_coluche
+     * Gets city
      *
-     * @return bool
+     * @return string|null
      */
-    public function getIsColuche()
+    public function getCity()
     {
-        return $this->container['is_coluche'];
+        return $this->container['city'];
     }
 
     /**
-     * Sets is_coluche
+     * Sets city
      *
-     * @param bool $is_coluche is_coluche
+     * @param string|null $city city
      *
      * @return self
      */
-    public function setIsColuche($is_coluche)
+    public function setCity($city)
     {
-        if (is_null($is_coluche)) {
-            throw new \InvalidArgumentException('non-nullable is_coluche cannot be null');
+        if (is_null($city)) {
+            array_push($this->openAPINullablesSetToNull, 'city');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('city', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['is_coluche'] = $is_coluche;
+        $this->container['city'] = $city;
 
         return $this;
     }
 
     /**
-     * Gets allow_ifi_tax_reductions
+     * Gets zip_code
      *
-     * @return bool
+     * @return string|null
      */
-    public function getAllowIfiTaxReductions()
+    public function getZipCode()
     {
-        return $this->container['allow_ifi_tax_reductions'];
+        return $this->container['zip_code'];
     }
 
     /**
-     * Sets allow_ifi_tax_reductions
+     * Sets zip_code
      *
-     * @param bool $allow_ifi_tax_reductions allow_ifi_tax_reductions
+     * @param string|null $zip_code zip_code
      *
      * @return self
      */
-    public function setAllowIfiTaxReductions($allow_ifi_tax_reductions)
+    public function setZipCode($zip_code)
     {
-        if (is_null($allow_ifi_tax_reductions)) {
-            throw new \InvalidArgumentException('non-nullable allow_ifi_tax_reductions cannot be null');
+        if (is_null($zip_code)) {
+            array_push($this->openAPINullablesSetToNull, 'zip_code');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('zip_code', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['allow_ifi_tax_reductions'] = $allow_ifi_tax_reductions;
+        $this->container['zip_code'] = $zip_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return int|null
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param int|null $country country
+     *
+     * @return self
+     */
+    public function setCountry($country)
+    {
+        if (is_null($country)) {
+            array_push($this->openAPINullablesSetToNull, 'country');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('country', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_name
+     *
+     * @return string|null
+     */
+    public function getCountryName()
+    {
+        return $this->container['country_name'];
+    }
+
+    /**
+     * Sets country_name
+     *
+     * @param string|null $country_name country_name
+     *
+     * @return self
+     */
+    public function setCountryName($country_name)
+    {
+        if (is_null($country_name)) {
+            array_push($this->openAPINullablesSetToNull, 'country_name');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('country_name', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['country_name'] = $country_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_alpha3
+     *
+     * @return string|null
+     */
+    public function getCountryAlpha3()
+    {
+        return $this->container['country_alpha3'];
+    }
+
+    /**
+     * Sets country_alpha3
+     *
+     * @param string|null $country_alpha3 country_alpha3
+     *
+     * @return self
+     */
+    public function setCountryAlpha3($country_alpha3)
+    {
+        if (is_null($country_alpha3)) {
+            array_push($this->openAPINullablesSetToNull, 'country_alpha3');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('country_alpha3', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['country_alpha3'] = $country_alpha3;
 
         return $this;
     }

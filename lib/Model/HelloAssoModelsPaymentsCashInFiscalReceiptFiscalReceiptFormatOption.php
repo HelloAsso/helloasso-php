@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody
+ * HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody Class Doc Comment
+ * HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'HelloAsso.Api.V5.Models.OrganizationLegalInformations.UpdateOrganizationLegalInformationConfigurationBody';
+    protected static $openAPIModelName = 'HelloAsso.Models.Payments.CashIn.FiscalReceipt.FiscalReceiptFormatOption';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'legal_structure_id' => 'int',
-        'is_coluche' => 'bool',
-        'allow_ifi_tax_reductions' => 'bool'
+        'date' => 'string',
+        'order' => 'string',
+        'root' => 'string',
+        'separator' => 'string'
     ];
 
     /**
@@ -70,9 +71,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'legal_structure_id' => 'int32',
-        'is_coluche' => null,
-        'allow_ifi_tax_reductions' => null
+        'date' => null,
+        'order' => null,
+        'root' => null,
+        'separator' => null
     ];
 
     /**
@@ -81,9 +83,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'legal_structure_id' => false,
-        'is_coluche' => false,
-        'allow_ifi_tax_reductions' => false
+        'date' => true,
+        'order' => true,
+        'root' => true,
+        'separator' => true
     ];
 
     /**
@@ -172,9 +175,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $attributeMap = [
-        'legal_structure_id' => 'legalStructureId',
-        'is_coluche' => 'isColuche',
-        'allow_ifi_tax_reductions' => 'allowIfiTaxReductions'
+        'date' => 'date',
+        'order' => 'order',
+        'root' => 'root',
+        'separator' => 'separator'
     ];
 
     /**
@@ -183,9 +187,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $setters = [
-        'legal_structure_id' => 'setLegalStructureId',
-        'is_coluche' => 'setIsColuche',
-        'allow_ifi_tax_reductions' => 'setAllowIfiTaxReductions'
+        'date' => 'setDate',
+        'order' => 'setOrder',
+        'root' => 'setRoot',
+        'separator' => 'setSeparator'
     ];
 
     /**
@@ -194,9 +199,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $getters = [
-        'legal_structure_id' => 'getLegalStructureId',
-        'is_coluche' => 'getIsColuche',
-        'allow_ifi_tax_reductions' => 'getAllowIfiTaxReductions'
+        'date' => 'getDate',
+        'order' => 'getOrder',
+        'root' => 'getRoot',
+        'separator' => 'getSeparator'
     ];
 
     /**
@@ -256,9 +262,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('legal_structure_id', $data ?? [], null);
-        $this->setIfExists('is_coluche', $data ?? [], null);
-        $this->setIfExists('allow_ifi_tax_reductions', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
+        $this->setIfExists('order', $data ?? [], null);
+        $this->setIfExists('root', $data ?? [], null);
+        $this->setIfExists('separator', $data ?? [], null);
     }
 
     /**
@@ -288,15 +295,6 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
     {
         $invalidProperties = [];
 
-        if ($this->container['legal_structure_id'] === null) {
-            $invalidProperties[] = "'legal_structure_id' can't be null";
-        }
-        if ($this->container['is_coluche'] === null) {
-            $invalidProperties[] = "'is_coluche' can't be null";
-        }
-        if ($this->container['allow_ifi_tax_reductions'] === null) {
-            $invalidProperties[] = "'allow_ifi_tax_reductions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -313,82 +311,137 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
 
 
     /**
-     * Gets legal_structure_id
+     * Gets date
      *
-     * @return int
+     * @return string|null
      */
-    public function getLegalStructureId()
+    public function getDate()
     {
-        return $this->container['legal_structure_id'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets legal_structure_id
+     * Sets date
      *
-     * @param int $legal_structure_id legal_structure_id
+     * @param string|null $date date
      *
      * @return self
      */
-    public function setLegalStructureId($legal_structure_id)
+    public function setDate($date)
     {
-        if (is_null($legal_structure_id)) {
-            throw new \InvalidArgumentException('non-nullable legal_structure_id cannot be null');
+        if (is_null($date)) {
+            array_push($this->openAPINullablesSetToNull, 'date');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('date', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['legal_structure_id'] = $legal_structure_id;
+        $this->container['date'] = $date;
 
         return $this;
     }
 
     /**
-     * Gets is_coluche
+     * Gets order
      *
-     * @return bool
+     * @return string|null
      */
-    public function getIsColuche()
+    public function getOrder()
     {
-        return $this->container['is_coluche'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets is_coluche
+     * Sets order
      *
-     * @param bool $is_coluche is_coluche
+     * @param string|null $order order
      *
      * @return self
      */
-    public function setIsColuche($is_coluche)
+    public function setOrder($order)
     {
-        if (is_null($is_coluche)) {
-            throw new \InvalidArgumentException('non-nullable is_coluche cannot be null');
+        if (is_null($order)) {
+            array_push($this->openAPINullablesSetToNull, 'order');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('order', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['is_coluche'] = $is_coluche;
+        $this->container['order'] = $order;
 
         return $this;
     }
 
     /**
-     * Gets allow_ifi_tax_reductions
+     * Gets root
      *
-     * @return bool
+     * @return string|null
      */
-    public function getAllowIfiTaxReductions()
+    public function getRoot()
     {
-        return $this->container['allow_ifi_tax_reductions'];
+        return $this->container['root'];
     }
 
     /**
-     * Sets allow_ifi_tax_reductions
+     * Sets root
      *
-     * @param bool $allow_ifi_tax_reductions allow_ifi_tax_reductions
+     * @param string|null $root root
      *
      * @return self
      */
-    public function setAllowIfiTaxReductions($allow_ifi_tax_reductions)
+    public function setRoot($root)
     {
-        if (is_null($allow_ifi_tax_reductions)) {
-            throw new \InvalidArgumentException('non-nullable allow_ifi_tax_reductions cannot be null');
+        if (is_null($root)) {
+            array_push($this->openAPINullablesSetToNull, 'root');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('root', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['allow_ifi_tax_reductions'] = $allow_ifi_tax_reductions;
+        $this->container['root'] = $root;
+
+        return $this;
+    }
+
+    /**
+     * Gets separator
+     *
+     * @return string|null
+     */
+    public function getSeparator()
+    {
+        return $this->container['separator'];
+    }
+
+    /**
+     * Sets separator
+     *
+     * @param string|null $separator separator
+     *
+     * @return self
+     */
+    public function setSeparator($separator)
+    {
+        if (is_null($separator)) {
+            array_push($this->openAPINullablesSetToNull, 'separator');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('separator', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['separator'] = $separator;
 
         return $this;
     }

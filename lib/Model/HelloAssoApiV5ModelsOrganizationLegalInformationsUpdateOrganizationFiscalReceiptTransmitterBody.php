@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody
+ * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody Class Doc Comment
+ * HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody implements ModelInterface, ArrayAccess, \JsonSerializable
+class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'HelloAsso.Api.V5.Models.OrganizationLegalInformations.UpdateOrganizationLegalInformationConfigurationBody';
+    protected static $openAPIModelName = 'HelloAsso.Api.V5.Models.OrganizationLegalInformations.UpdateOrganizationFiscalReceiptTransmitterBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'legal_structure_id' => 'int',
-        'is_coluche' => 'bool',
-        'allow_ifi_tax_reductions' => 'bool'
+        'is_hello_asso_fiscal_receipt_transmitter' => 'bool'
     ];
 
     /**
@@ -70,9 +68,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'legal_structure_id' => 'int32',
-        'is_coluche' => null,
-        'allow_ifi_tax_reductions' => null
+        'is_hello_asso_fiscal_receipt_transmitter' => null
     ];
 
     /**
@@ -81,9 +77,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'legal_structure_id' => false,
-        'is_coluche' => false,
-        'allow_ifi_tax_reductions' => false
+        'is_hello_asso_fiscal_receipt_transmitter' => false
     ];
 
     /**
@@ -172,9 +166,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $attributeMap = [
-        'legal_structure_id' => 'legalStructureId',
-        'is_coluche' => 'isColuche',
-        'allow_ifi_tax_reductions' => 'allowIfiTaxReductions'
+        'is_hello_asso_fiscal_receipt_transmitter' => 'isHelloAssoFiscalReceiptTransmitter'
     ];
 
     /**
@@ -183,9 +175,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $setters = [
-        'legal_structure_id' => 'setLegalStructureId',
-        'is_coluche' => 'setIsColuche',
-        'allow_ifi_tax_reductions' => 'setAllowIfiTaxReductions'
+        'is_hello_asso_fiscal_receipt_transmitter' => 'setIsHelloAssoFiscalReceiptTransmitter'
     ];
 
     /**
@@ -194,9 +184,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @var string[]
      */
     protected static $getters = [
-        'legal_structure_id' => 'getLegalStructureId',
-        'is_coluche' => 'getIsColuche',
-        'allow_ifi_tax_reductions' => 'getAllowIfiTaxReductions'
+        'is_hello_asso_fiscal_receipt_transmitter' => 'getIsHelloAssoFiscalReceiptTransmitter'
     ];
 
     /**
@@ -256,9 +244,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('legal_structure_id', $data ?? [], null);
-        $this->setIfExists('is_coluche', $data ?? [], null);
-        $this->setIfExists('allow_ifi_tax_reductions', $data ?? [], null);
+        $this->setIfExists('is_hello_asso_fiscal_receipt_transmitter', $data ?? [], null);
     }
 
     /**
@@ -288,15 +274,6 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
     {
         $invalidProperties = [];
 
-        if ($this->container['legal_structure_id'] === null) {
-            $invalidProperties[] = "'legal_structure_id' can't be null";
-        }
-        if ($this->container['is_coluche'] === null) {
-            $invalidProperties[] = "'is_coluche' can't be null";
-        }
-        if ($this->container['allow_ifi_tax_reductions'] === null) {
-            $invalidProperties[] = "'allow_ifi_tax_reductions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -313,82 +290,28 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
 
 
     /**
-     * Gets legal_structure_id
+     * Gets is_hello_asso_fiscal_receipt_transmitter
      *
-     * @return int
+     * @return bool|null
      */
-    public function getLegalStructureId()
+    public function getIsHelloAssoFiscalReceiptTransmitter()
     {
-        return $this->container['legal_structure_id'];
+        return $this->container['is_hello_asso_fiscal_receipt_transmitter'];
     }
 
     /**
-     * Sets legal_structure_id
+     * Sets is_hello_asso_fiscal_receipt_transmitter
      *
-     * @param int $legal_structure_id legal_structure_id
+     * @param bool|null $is_hello_asso_fiscal_receipt_transmitter is_hello_asso_fiscal_receipt_transmitter
      *
      * @return self
      */
-    public function setLegalStructureId($legal_structure_id)
+    public function setIsHelloAssoFiscalReceiptTransmitter($is_hello_asso_fiscal_receipt_transmitter)
     {
-        if (is_null($legal_structure_id)) {
-            throw new \InvalidArgumentException('non-nullable legal_structure_id cannot be null');
+        if (is_null($is_hello_asso_fiscal_receipt_transmitter)) {
+            throw new \InvalidArgumentException('non-nullable is_hello_asso_fiscal_receipt_transmitter cannot be null');
         }
-        $this->container['legal_structure_id'] = $legal_structure_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_coluche
-     *
-     * @return bool
-     */
-    public function getIsColuche()
-    {
-        return $this->container['is_coluche'];
-    }
-
-    /**
-     * Sets is_coluche
-     *
-     * @param bool $is_coluche is_coluche
-     *
-     * @return self
-     */
-    public function setIsColuche($is_coluche)
-    {
-        if (is_null($is_coluche)) {
-            throw new \InvalidArgumentException('non-nullable is_coluche cannot be null');
-        }
-        $this->container['is_coluche'] = $is_coluche;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_ifi_tax_reductions
-     *
-     * @return bool
-     */
-    public function getAllowIfiTaxReductions()
-    {
-        return $this->container['allow_ifi_tax_reductions'];
-    }
-
-    /**
-     * Sets allow_ifi_tax_reductions
-     *
-     * @param bool $allow_ifi_tax_reductions allow_ifi_tax_reductions
-     *
-     * @return self
-     */
-    public function setAllowIfiTaxReductions($allow_ifi_tax_reductions)
-    {
-        if (is_null($allow_ifi_tax_reductions)) {
-            throw new \InvalidArgumentException('non-nullable allow_ifi_tax_reductions cannot be null');
-        }
-        $this->container['allow_ifi_tax_reductions'] = $allow_ifi_tax_reductions;
+        $this->container['is_hello_asso_fiscal_receipt_transmitter'] = $is_hello_asso_fiscal_receipt_transmitter;
 
         return $this;
     }

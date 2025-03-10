@@ -804,7 +804,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_publication_start_date_min
      *
-     * @param \DateTime|null $form_publication_start_date_min The minimum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_publication_start_date_min The inclusive minimum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */
@@ -838,7 +838,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_publication_start_date_max
      *
-     * @param \DateTime|null $form_publication_start_date_max The maximum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_publication_start_date_max The exclusive maximum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */
@@ -872,7 +872,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_start_date_min
      *
-     * @param \DateTime|null $form_start_date_min The minimum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_start_date_min The inclusive minimum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */
@@ -906,7 +906,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_start_date_max
      *
-     * @param \DateTime|null $form_start_date_max The maximum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_start_date_max The exclusive maximum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */
@@ -940,7 +940,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_end_date_max
      *
-     * @param \DateTime|null $form_end_date_max The maximum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_end_date_max The exclusive maximum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */
@@ -974,7 +974,7 @@ class HelloAssoApiV5ModelsDirectoryListFormsRequest implements ModelInterface, A
     /**
      * Sets form_end_date_min
      *
-     * @param \DateTime|null $form_end_date_min The minimum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+     * @param \DateTime|null $form_end_date_min The inclusive minimum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
      *
      * @return self
      */

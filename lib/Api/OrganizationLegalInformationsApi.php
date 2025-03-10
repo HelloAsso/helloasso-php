@@ -128,6 +128,8 @@ class OrganizationLegalInformationsApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationPut
      *
+     * Update the organization legal information configuration
+     *
      * @param  string $organization_slug organization_slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody|null $hello_asso_api_v5_models_organization_legal_informations_update_organization_legal_information_configuration_body hello_asso_api_v5_models_organization_legal_informations_update_organization_legal_information_configuration_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationPut'] to see the possible values for this operation
@@ -143,6 +145,8 @@ class OrganizationLegalInformationsApi
 
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationPutWithHttpInfo
+     *
+     * Update the organization legal information configuration
      *
      * @param  string $organization_slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody|null $hello_asso_api_v5_models_organization_legal_informations_update_organization_legal_information_configuration_body (optional)
@@ -191,6 +195,8 @@ class OrganizationLegalInformationsApi
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationPutAsync
      *
+     * Update the organization legal information configuration
+     *
      * @param  string $organization_slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody|null $hello_asso_api_v5_models_organization_legal_informations_update_organization_legal_information_configuration_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsLegalInformationsOrganizationSlugConfigurationPut'] to see the possible values for this operation
@@ -210,6 +216,8 @@ class OrganizationLegalInformationsApi
 
     /**
      * Operation organizationsLegalInformationsOrganizationSlugConfigurationPutAsyncWithHttpInfo
+     *
+     * Update the organization legal information configuration
      *
      * @param  string $organization_slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody|null $hello_asso_api_v5_models_organization_legal_informations_update_organization_legal_information_configuration_body (optional)
