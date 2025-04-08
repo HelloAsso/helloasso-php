@@ -1009,7 +1009,7 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1020,14 +1020,14 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
         $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
     }
@@ -1041,7 +1041,7 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1052,14 +1052,14 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
 
@@ -1104,7 +1104,7 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1115,13 +1115,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
         return $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType)
             ->then(
@@ -1140,7 +1140,7 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1151,13 +1151,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
         $returnType = '';
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
@@ -1192,7 +1192,7 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1203,13 +1203,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set
@@ -1465,21 +1465,21 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
         list($response) = $this->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count, $contentType);
         return $response;
@@ -1494,21 +1494,21 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count, $contentType);
 
@@ -1630,20 +1630,20 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
         return $this->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count, $contentType)
             ->then(
@@ -1662,20 +1662,20 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder';
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count, $contentType);
@@ -1723,20 +1723,20 @@ class CommandesApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort forms orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set
@@ -1950,7 +1950,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1961,14 +1961,14 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort organizations items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function organizationsOrganizationSlugItemsGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
+    public function organizationsOrganizationSlugItemsGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
     {
         $this->organizationsOrganizationSlugItemsGetWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
     }
@@ -1980,7 +1980,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -1991,14 +1991,14 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort organizations items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugItemsGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
+    public function organizationsOrganizationSlugItemsGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
     {
         $request = $this->organizationsOrganizationSlugItemsGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
 
@@ -2041,7 +2041,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2052,13 +2052,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort organizations items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugItemsGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
+    public function organizationsOrganizationSlugItemsGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
     {
         return $this->organizationsOrganizationSlugItemsGetAsyncWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType)
             ->then(
@@ -2075,7 +2075,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2086,13 +2086,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort organizations items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugItemsGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
+    public function organizationsOrganizationSlugItemsGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
     {
         $returnType = '';
         $request = $this->organizationsOrganizationSlugItemsGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count, $contentType);
@@ -2125,7 +2125,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2136,13 +2136,13 @@ class CommandesApi
      * @param  bool|null $with_details Set to true to return CustomFields and Options (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations items by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort organizations items by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugItemsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugItemsGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
+    public function organizationsOrganizationSlugItemsGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugItemsGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set
@@ -2366,7 +2366,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2374,14 +2374,14 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
      */
-    public function organizationsOrganizationSlugOrdersGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugOrdersGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
         list($response) = $this->organizationsOrganizationSlugOrdersGetWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count, $contentType);
         return $response;
@@ -2394,7 +2394,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2402,14 +2402,14 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugOrdersGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugOrdersGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
         $request = $this->organizationsOrganizationSlugOrdersGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count, $contentType);
 
@@ -2529,7 +2529,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2537,13 +2537,13 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugOrdersGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugOrdersGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
         return $this->organizationsOrganizationSlugOrdersGetAsyncWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count, $contentType)
             ->then(
@@ -2560,7 +2560,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2568,13 +2568,13 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugOrdersGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugOrdersGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder';
         $request = $this->organizationsOrganizationSlugOrdersGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count, $contentType);
@@ -2620,7 +2620,7 @@ class CommandesApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -2628,13 +2628,13 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
      * @param  bool|null $with_details Set to true to return CustomFields (optional, default to false)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort organizations orders by ascending or descending order. Default is descending (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugOrdersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugOrdersGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
+    public function organizationsOrganizationSlugOrdersGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set

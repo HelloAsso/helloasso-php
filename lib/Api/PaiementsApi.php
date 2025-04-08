@@ -143,7 +143,7 @@ class PaiementsApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -151,14 +151,14 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
         list($response) = $this->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
         return $response;
@@ -173,7 +173,7 @@ class PaiementsApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -181,14 +181,14 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelPayment, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
 
@@ -310,7 +310,7 @@ class PaiementsApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -318,13 +318,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsync($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
         return $this->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType)
             ->then(
@@ -343,7 +343,7 @@ class PaiementsApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -351,13 +351,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
         $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment';
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
@@ -405,7 +405,7 @@ class PaiementsApi
      * @param  string $form_slug The form slug (required)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType $form_type The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -413,13 +413,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetRequest($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set
@@ -643,7 +643,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization Slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -651,14 +651,14 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function organizationsOrganizationSlugPaymentsGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugPaymentsGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
         $this->organizationsOrganizationSlugPaymentsGetWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
     }
@@ -670,7 +670,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization Slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -678,14 +678,14 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organizationsOrganizationSlugPaymentsGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugPaymentsGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
         $request = $this->organizationsOrganizationSlugPaymentsGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
 
@@ -728,7 +728,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization Slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -736,13 +736,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugPaymentsGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugPaymentsGetAsync($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
         return $this->organizationsOrganizationSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType)
             ->then(
@@ -759,7 +759,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization Slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -767,13 +767,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function organizationsOrganizationSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
         $returnType = '';
         $request = $this->organizationsOrganizationSlugPaymentsGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count, $contentType);
@@ -806,7 +806,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization Slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  string|null $user_search_key Filter results on user or payer first name, last name or email (optional)
      * @param  int|null $page_index The page of results to retrieve (optional, default to 1)
      * @param  int|null $page_size The number of items per page (optional, default to 20)
@@ -814,13 +814,13 @@ class PaiementsApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]|null $states The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder|null $sort_order Sort payments by ascending or descending order. Default is descending (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField|null $sort_field Sort payments by a specific field (Date or UpdateDate). Default is date (optional)
-     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to true)
+     * @param  bool|null $with_count Whether the pagination should include totalCount and totalPages. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugPaymentsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function organizationsOrganizationSlugPaymentsGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = true, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
+    public function organizationsOrganizationSlugPaymentsGetRequest($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, $with_count = false, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
 
         // verify the required parameter 'organization_slug' is set
@@ -1014,7 +1014,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  int|null $page_size The number of items to retrieve (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
@@ -1044,7 +1044,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  int|null $page_size The number of items to retrieve (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
@@ -1181,7 +1181,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  int|null $page_size The number of items to retrieve (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
@@ -1214,7 +1214,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  int|null $page_size The number of items to retrieve (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)
@@ -1276,7 +1276,7 @@ class PaiementsApi
      *
      * @param  string $organization_slug The organization slug (required)
      * @param  \DateTime|null $from First Date Filter (optional)
-     * @param  \DateTime|null $to End Date Filter (optional)
+     * @param  \DateTime|null $to End Date Filter (exclusive) (optional)
      * @param  int|null $page_size The number of items to retrieve (optional, default to 20)
      * @param  string|null $continuation_token Continuation Token from which we wish to retrieve results (optional)
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]|null $form_types The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop (optional)

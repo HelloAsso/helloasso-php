@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_authenticated** | **bool** | The organization is authenticated. Property returned only when asked by an organization admin. | [optional]
+**is_cash_in_compliant** | **bool** | If transaction can be init on the organization or not. | [optional]
 **banner** | **string** | The organization banner | [optional]
 **fiscal_receipt_eligibility** | **bool** | The organism can issue fiscal receipts (type ok and has not deactivated it)  Must configure it and be authenticated to become enabled | [optional]
 **fiscal_receipt_issuance_enabled** | **bool** | The organism is eligible, has set up his options, and is authenticated. | [optional]

@@ -225,7 +225,7 @@ $organization_slug = 'organization_slug_example'; // string | The organization s
 $form_slug = 'form_slug_example'; // string | The form slug
 $form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
@@ -236,7 +236,7 @@ $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
@@ -253,7 +253,7 @@ try {
 | **form_slug** | **string**| The form slug | |
 | **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
@@ -264,7 +264,7 @@ try {
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort forms items by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -314,14 +314,14 @@ $organization_slug = 'organization_slug_example'; // string | The organization s
 $form_slug = 'form_slug_example'; // string | The form slug
 $form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 $with_details = false; // bool | Set to true to return CustomFields
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count);
@@ -339,14 +339,14 @@ try {
 | **form_slug** | **string**| The form slug | |
 | **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -394,7 +394,7 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization slug
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
@@ -405,7 +405,7 @@ $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $apiInstance->organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
@@ -420,7 +420,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization slug | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
@@ -431,7 +431,7 @@ try {
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -479,7 +479,7 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization slug
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
@@ -487,7 +487,7 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $with_details = false; // bool | Set to true to return CustomFields
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $result = $apiInstance->organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count);
@@ -503,7 +503,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization slug | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
@@ -511,7 +511,7 @@ try {
 | **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 

@@ -59,6 +59,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
       */
     protected static $openAPITypes = [
         'is_authenticated' => 'bool',
+        'is_cash_in_compliant' => 'bool',
         'banner' => 'string',
         'fiscal_receipt_eligibility' => 'bool',
         'fiscal_receipt_issuance_enabled' => 'bool',
@@ -88,6 +89,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
       */
     protected static $openAPIFormats = [
         'is_authenticated' => null,
+        'is_cash_in_compliant' => null,
         'banner' => null,
         'fiscal_receipt_eligibility' => null,
         'fiscal_receipt_issuance_enabled' => null,
@@ -115,6 +117,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
       */
     protected static array $openAPINullables = [
         'is_authenticated' => true,
+        'is_cash_in_compliant' => true,
         'banner' => true,
         'fiscal_receipt_eligibility' => false,
         'fiscal_receipt_issuance_enabled' => false,
@@ -222,6 +225,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
      */
     protected static $attributeMap = [
         'is_authenticated' => 'isAuthenticated',
+        'is_cash_in_compliant' => 'isCashInCompliant',
         'banner' => 'banner',
         'fiscal_receipt_eligibility' => 'fiscalReceiptEligibility',
         'fiscal_receipt_issuance_enabled' => 'fiscalReceiptIssuanceEnabled',
@@ -249,6 +253,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
      */
     protected static $setters = [
         'is_authenticated' => 'setIsAuthenticated',
+        'is_cash_in_compliant' => 'setIsCashInCompliant',
         'banner' => 'setBanner',
         'fiscal_receipt_eligibility' => 'setFiscalReceiptEligibility',
         'fiscal_receipt_issuance_enabled' => 'setFiscalReceiptIssuanceEnabled',
@@ -276,6 +281,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
      */
     protected static $getters = [
         'is_authenticated' => 'getIsAuthenticated',
+        'is_cash_in_compliant' => 'getIsCashInCompliant',
         'banner' => 'getBanner',
         'fiscal_receipt_eligibility' => 'getFiscalReceiptEligibility',
         'fiscal_receipt_issuance_enabled' => 'getFiscalReceiptIssuanceEnabled',
@@ -354,6 +360,7 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
     public function __construct(?array $data = null)
     {
         $this->setIfExists('is_authenticated', $data ?? [], null);
+        $this->setIfExists('is_cash_in_compliant', $data ?? [], null);
         $this->setIfExists('banner', $data ?? [], null);
         $this->setIfExists('fiscal_receipt_eligibility', $data ?? [], null);
         $this->setIfExists('fiscal_receipt_issuance_enabled', $data ?? [], null);
@@ -446,6 +453,40 @@ class HelloAssoApiV5ModelsOrganizationOrganizationModel implements ModelInterfac
             }
         }
         $this->container['is_authenticated'] = $is_authenticated;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_cash_in_compliant
+     *
+     * @return bool|null
+     */
+    public function getIsCashInCompliant()
+    {
+        return $this->container['is_cash_in_compliant'];
+    }
+
+    /**
+     * Sets is_cash_in_compliant
+     *
+     * @param bool|null $is_cash_in_compliant If transaction can be init on the organization or not.
+     *
+     * @return self
+     */
+    public function setIsCashInCompliant($is_cash_in_compliant)
+    {
+        if (is_null($is_cash_in_compliant)) {
+            array_push($this->openAPINullablesSetToNull, 'is_cash_in_compliant');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('is_cash_in_compliant', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['is_cash_in_compliant'] = $is_cash_in_compliant;
 
         return $this;
     }

@@ -42,7 +42,7 @@ $organization_slug = 'organization_slug_example'; // string | The organization s
 $form_slug = 'form_slug_example'; // string | The form slug
 $form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
@@ -50,7 +50,7 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
@@ -68,7 +68,7 @@ try {
 | **form_slug** | **string**| The form slug | |
 | **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
@@ -76,7 +76,7 @@ try {
 | **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort payments by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -124,7 +124,7 @@ $apiInstance = new OpenAPI\Client\Api\PaiementsApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
@@ -132,7 +132,7 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-$with_count = true; // bool | Whether the pagination should include totalCount and totalPages.
+$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
     $apiInstance->organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
@@ -147,7 +147,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization Slug | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
@@ -155,7 +155,7 @@ try {
 | **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort payments by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true] |
+| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -203,7 +203,7 @@ $apiInstance = new OpenAPI\Client\Api\PaiementsApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization slug
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
-$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter
+$to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $page_size = 20; // int | The number of items to retrieve
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 $form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[] | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
@@ -229,7 +229,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization slug | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
-| **to** | **\DateTime**| End Date Filter | [optional] |
+| **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **page_size** | **int**| The number of items to retrieve | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
 | **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] |
