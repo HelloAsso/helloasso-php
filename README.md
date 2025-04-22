@@ -1,6 +1,6 @@
-# OpenAPIClient-php
+# helloasso-php
 
-HelloAsso auto-generated SDK
+The HelloAsso PHP library offers a straightforward way to interact with the HelloAsso API in PHP applications. It features a collection of pre-built classes for API resources that automatically adapt to API responses, ensuring flexibility across different versions of the HelloAsso API.
 
 
 ## Installation & Usage
@@ -12,23 +12,17 @@ Should also work with PHP 8.0.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+You can install the bindings via Composer. Run the following command:
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    }
-  ],
-  "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
-  }
-}
+```
+composer require helloasso/helloasso-php
 ```
 
-Then run `composer install`
+To use the bindings, use Composer's autoload:
+
+```
+require_once 'vendor/autoload.php';
+```
 
 ### Manual Installation
 
@@ -36,7 +30,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once('/path/to/helloasso-php/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -223,13 +217,133 @@ Class | Method | HTTP request | Description
 
 ## Authorization
 
-Authentication schemes defined for the API:
-### OAuth2
+We use OAuth2 for authentication, so to avoid reinventing the wheel, we recommend using the [league/oauth2-client](https://packagist.org/packages/league/oauth2-client) package
 
-- **Type**: `OAuth`
-- **Flow**: `application`
-- **Authorization URL**: ``
-- **Scopes**: N/A
+### Prerequisite
+Install the league/oauth2-client package:
+
+```bash
+composer require league/oauth2-client
+```
+
+### Client Credentials Flow
+```php
+require 'vendor/autoload.php';
+
+use League\OAuth2\Client\Provider\GenericProvider;
+
+$provider = new GenericProvider([
+    'clientId'                => 'your_client_id',
+    'clientSecret'            => 'your_client_secret',
+    'urlAccessToken'          => 'https://api.helloasso.com/oauth2/token',
+    'urlAuthorize'            => '',
+    'urlResourceOwnerDetails' => ''
+]);
+
+try {
+    // Get access token using client credentials
+    $accessToken = $provider->getAccessToken('client_credentials');
+
+    echo 'Access Token: ' . $accessToken->getToken();
+    echo 'Expires in: ' . $accessToken->getExpires();
+    echo 'Refresh Token: ' . $accessToken->getRefreshToken();
+} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+```
+
+### Refresh Token Flow
+```php
+require 'vendor/autoload.php';
+
+use League\OAuth2\Client\Provider\GenericProvider;
+
+$provider = new GenericProvider([
+    'clientId'                => 'your_client_id',
+    'clientSecret'            => 'your_client_secret',
+    'urlAccessToken'          => 'https://api.helloasso.com/oauth2/token',
+    'urlAuthorize'            => '',
+    'urlResourceOwnerDetails' => ''
+]);
+
+$refreshToken = 'your_refresh_token';
+
+try {
+    // Refresh the access token
+    $newAccessToken = $provider->getAccessToken('refresh_token', [
+        'refresh_token' => $refreshToken,
+    ]);
+
+    echo 'New Access Token: ' . $newAccessToken->getToken();
+    echo 'Expires in: ' . $newAccessToken->getExpires();
+    echo 'New Refresh Token: ' . $accessToken->getRefreshToken();
+} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+```
+
+### Authorization Code Flow
+```php
+require 'vendor/autoload.php';
+
+use League\OAuth2\Client\Provider\GenericProvider;
+
+$provider = new GenericProvider([
+    'clientId'                => 'your_client_id',
+    'clientSecret'            => 'your_client_secret',
+    'redirectUri'             => 'https://your-app.com/callback',
+    'urlAuthorize'            => 'https://auth.helloasso.com/authorize',
+    'urlAccessToken'          => 'https://api.helloasso.com/oauth2/token',
+    'urlResourceOwnerDetails' => ''
+]);
+
+// Function to generate a random code verifier
+function generateCodeVerifier() {
+    return bin2hex(random_bytes(32));
+}
+
+// Function to generate a code challenge from the code verifier
+function generateCodeChallenge($codeVerifier) {
+    return rtrim(strtr(base64_encode(hash('sha256', $codeVerifier, true)), '+/', '-_'), '=');
+}
+
+// Step 1: Generate the authorization URL
+function GetAuthorizationUrl($provider) {
+    $codeVerifier = generateCodeVerifier();
+    $codeChallenge = generateCodeChallenge($codeVerifier);
+
+    $authorizationUrl = $provider->getAuthorizationUrl([
+        'state' => 'random_state_string',
+        'code_challenge' => $codeChallenge,
+        'code_challenge_method' => 'S256',
+    ]);
+
+    echo 'Authorization URL: ' . $authorizationUrl . "\n";
+    echo 'Code verifier: ' . $codeVerifier . "\n";
+}
+
+// Step 2: Handle the callback and exchange the authorization code for an access token
+function GetAccessTokenFromCode($provider, $authorizationCode, $codeVerifier) {
+    try {
+        // Get access token
+        $accessToken = $provider->getAccessToken('authorization_code', [
+            'code' => $authorizationCode,
+            'code_verifier' => $codeVerifier
+        ]);
+
+        echo 'Access Token: ' . $accessToken->getToken() . "\n";
+        echo 'Expires in: ' . $accessToken->getExpires() . "\n";
+        echo 'New Refresh Token: ' . $accessToken->getRefreshToken() . "\n";
+    } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+}
+
+GetAuthorizationUrl($provider);
+// After user authorizes, exchange the code (passed in the redirect URL callback)
+//GetAccessTokenFromCode($provider, 'your_authorization_code', 'your_code_verifier');
+```
+
 
 ## Tests
 
@@ -240,14 +354,10 @@ composer install
 vendor/bin/phpunit
 ```
 
-## Author
-
-
-
 ## About this package
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `public`
-    - Generator version: `7.12.0`
+    - Generator version: `7.10.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
