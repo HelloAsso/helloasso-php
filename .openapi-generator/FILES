@@ -55,6 +55,8 @@ docs/Model/HelloAssoApiV5ModelsEnumsSortField.md
 docs/Model/HelloAssoApiV5ModelsEnumsSortOrder.md
 docs/Model/HelloAssoApiV5ModelsEnumsTagType.md
 docs/Model/HelloAssoApiV5ModelsEnumsTierType.md
+docs/Model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel.md
+docs/Model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel.md
 docs/Model/HelloAssoApiV5ModelsFormsFormBasicModel.md
 docs/Model/HelloAssoApiV5ModelsFormsFormLightModel.md
 docs/Model/HelloAssoApiV5ModelsFormsFormPublicModel.md
@@ -169,6 +171,8 @@ lib/Model/HelloAssoApiV5ModelsEnumsSortField.php
 lib/Model/HelloAssoApiV5ModelsEnumsSortOrder.php
 lib/Model/HelloAssoApiV5ModelsEnumsTagType.php
 lib/Model/HelloAssoApiV5ModelsEnumsTierType.php
+lib/Model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel.php
+lib/Model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel.php
 lib/Model/HelloAssoApiV5ModelsFormsFormBasicModel.php
 lib/Model/HelloAssoApiV5ModelsFormsFormLightModel.php
 lib/Model/HelloAssoApiV5ModelsFormsFormPublicModel.php
@@ -227,3 +231,5 @@ lib/Model/ResultsWithPaginationModelSynchronizableFormModel.php
 lib/Model/ResultsWithPaginationModelSynchronizableOrganizationModel.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/HelloAssoApiV5ModelsFormsCustomFieldPublicModelTest.php
+test/Model/HelloAssoApiV5ModelsFormsExtraOptionPublicModelTest.php

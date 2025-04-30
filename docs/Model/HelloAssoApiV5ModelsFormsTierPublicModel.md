@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**custom_fields** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsCustomFieldPublicModel[]**](HelloAssoApiV5ModelsFormsCustomFieldPublicModel.md) | List of custom fields to be filled by the user | [optional]
+**extra_options** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsExtraOptionPublicModel[]**](HelloAssoApiV5ModelsFormsExtraOptionPublicModel.md) | List of available extra options to buy along the tier | [optional]
 **id** | **int** | id | [optional]
 **label** | **string** | label | [optional]
 **description** | **string** | description | [optional]

@@ -58,6 +58,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
+        'custom_fields' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsCustomFieldPublicModel[]',
+        'extra_options' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsExtraOptionPublicModel[]',
         'id' => 'int',
         'label' => 'string',
         'description' => 'string',
@@ -84,6 +86,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'custom_fields' => null,
+        'extra_options' => null,
         'id' => 'int32',
         'label' => null,
         'description' => null,
@@ -108,6 +112,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'custom_fields' => true,
+        'extra_options' => true,
         'id' => false,
         'label' => true,
         'description' => true,
@@ -212,6 +218,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
+        'custom_fields' => 'customFields',
+        'extra_options' => 'extraOptions',
         'id' => 'id',
         'label' => 'label',
         'description' => 'description',
@@ -236,6 +244,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
+        'custom_fields' => 'setCustomFields',
+        'extra_options' => 'setExtraOptions',
         'id' => 'setId',
         'label' => 'setLabel',
         'description' => 'setDescription',
@@ -260,6 +270,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
+        'custom_fields' => 'getCustomFields',
+        'extra_options' => 'getExtraOptions',
         'id' => 'getId',
         'label' => 'getLabel',
         'description' => 'getDescription',
@@ -335,6 +347,8 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('custom_fields', $data ?? [], null);
+        $this->setIfExists('extra_options', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('label', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
@@ -394,6 +408,74 @@ class HelloAssoApiV5ModelsFormsTierPublicModel implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets custom_fields
+     *
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsCustomFieldPublicModel[]|null
+     */
+    public function getCustomFields()
+    {
+        return $this->container['custom_fields'];
+    }
+
+    /**
+     * Sets custom_fields
+     *
+     * @param \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsCustomFieldPublicModel[]|null $custom_fields List of custom fields to be filled by the user
+     *
+     * @return self
+     */
+    public function setCustomFields($custom_fields)
+    {
+        if (is_null($custom_fields)) {
+            array_push($this->openAPINullablesSetToNull, 'custom_fields');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('custom_fields', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['custom_fields'] = $custom_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets extra_options
+     *
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsExtraOptionPublicModel[]|null
+     */
+    public function getExtraOptions()
+    {
+        return $this->container['extra_options'];
+    }
+
+    /**
+     * Sets extra_options
+     *
+     * @param \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsExtraOptionPublicModel[]|null $extra_options List of available extra options to buy along the tier
+     *
+     * @return self
+     */
+    public function setExtraOptions($extra_options)
+    {
+        if (is_null($extra_options)) {
+            array_push($this->openAPINullablesSetToNull, 'extra_options');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('extra_options', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['extra_options'] = $extra_options;
+
+        return $this;
+    }
 
     /**
      * Gets id
