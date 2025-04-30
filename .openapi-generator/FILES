@@ -1,7 +1,6 @@
 .gitignore
 .php-cs-fixer.dist.php
 .travis.yml
-composer.json
 docs/Api/AnnuaireApi.md
 docs/Api/CheckoutApi.md
 docs/Api/CommandesApi.md
