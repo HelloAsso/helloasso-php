@@ -1,5 +1,4 @@
 {
-    "name": "helloasso/helloasso-php",
     "description": "HelloAsso auto-generated SDK",
     "keywords": [
         "openapitools",
@@ -10,12 +9,14 @@
         "rest",
         "api"
     ],
-    "homepage": "https://dev.helloasso.com/",
-    "license": "GPL-3.0-or-later",
-    "authors": [{
-        "name": "HelloAsso",
-        "homepage": "https://www.helloasso.com/"
-    }],
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
+    "authors": [
+        {
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "ext-curl": "*",
@@ -29,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\": "lib/" }
+        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\": "test/" }
+        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
     }
 }
