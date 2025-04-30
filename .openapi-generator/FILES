@@ -125,6 +125,7 @@ lib/Api/TagsApi.php
 lib/Api/UtilisateursApi.php
 lib/ApiException.php
 lib/Configuration.php
+lib/FormDataProcessor.php
 lib/HeaderSelector.php
 lib/Model/HaTrustContractLegalInformationAddressAddressDto.php
 lib/Model/HelloAssoApiV5ModelsAccountCompanyLegalStatusModel.php
