@@ -7,7 +7,6 @@ docs/Api/CommandesApi.md
 docs/Api/FormulairesApi.md
 docs/Api/ListeDeValeursApi.md
 docs/Api/OrganisationApi.md
-docs/Api/OrganizationPublicConfigurationsApi.md
 docs/Api/PaiementsApi.md
 docs/Api/PartenairesApi.md
 docs/Api/ReusFiscauxApi.md
@@ -72,9 +71,6 @@ docs/Model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLe
 docs/Model/HelloAssoApiV5ModelsOrganizationOrganizationBasicModel.md
 docs/Model/HelloAssoApiV5ModelsOrganizationOrganizationLightModel.md
 docs/Model/HelloAssoApiV5ModelsOrganizationOrganizationModel.md
-docs/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey.md
-docs/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel.md
-docs/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest.md
 docs/Model/HelloAssoApiV5ModelsPartnerStatisticsModel.md
 docs/Model/HelloAssoApiV5ModelsPartnersPartnerPublicModel.md
 docs/Model/HelloAssoApiV5ModelsPaymentPublicPaymentModel.md
@@ -123,7 +119,6 @@ lib/Api/CommandesApi.php
 lib/Api/FormulairesApi.php
 lib/Api/ListeDeValeursApi.php
 lib/Api/OrganisationApi.php
-lib/Api/OrganizationPublicConfigurationsApi.php
 lib/Api/PaiementsApi.php
 lib/Api/PartenairesApi.php
 lib/Api/ReusFiscauxApi.php
@@ -192,9 +187,6 @@ lib/Model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLeg
 lib/Model/HelloAssoApiV5ModelsOrganizationOrganizationBasicModel.php
 lib/Model/HelloAssoApiV5ModelsOrganizationOrganizationLightModel.php
 lib/Model/HelloAssoApiV5ModelsOrganizationOrganizationModel.php
-lib/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey.php
-lib/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel.php
-lib/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest.php
 lib/Model/HelloAssoApiV5ModelsPartnerStatisticsModel.php
 lib/Model/HelloAssoApiV5ModelsPartnersPartnerPublicModel.php
 lib/Model/HelloAssoApiV5ModelsPaymentPublicPaymentModel.php
@@ -239,7 +231,3 @@ lib/Model/ResultsWithPaginationModelSynchronizableFormModel.php
 lib/Model/ResultsWithPaginationModelSynchronizableOrganizationModel.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/OrganizationPublicConfigurationsApiTest.php
-test/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKeyTest.php
-test/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModelTest.php
-test/Model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequestTest.php

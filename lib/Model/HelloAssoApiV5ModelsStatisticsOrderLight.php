@@ -66,8 +66,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsOrganizationType',
         'organization_is_under_coluche_law' => 'bool',
         'checkout_intent_id' => 'int',
-        'meta' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsCommonMetaModel',
-        'place' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsCommonPlaceModel'
+        'meta' => '\OpenAPI\Client\Model\HelloAssoApiV5ModelsCommonMetaModel'
     ];
 
     /**
@@ -87,8 +86,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => null,
         'organization_is_under_coluche_law' => null,
         'checkout_intent_id' => 'int32',
-        'meta' => null,
-        'place' => null
+        'meta' => null
     ];
 
     /**
@@ -106,8 +104,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => false,
         'organization_is_under_coluche_law' => false,
         'checkout_intent_id' => true,
-        'meta' => false,
-        'place' => false
+        'meta' => false
     ];
 
     /**
@@ -205,8 +202,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => 'organizationType',
         'organization_is_under_coluche_law' => 'organizationIsUnderColucheLaw',
         'checkout_intent_id' => 'checkoutIntentId',
-        'meta' => 'meta',
-        'place' => 'place'
+        'meta' => 'meta'
     ];
 
     /**
@@ -224,8 +220,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => 'setOrganizationType',
         'organization_is_under_coluche_law' => 'setOrganizationIsUnderColucheLaw',
         'checkout_intent_id' => 'setCheckoutIntentId',
-        'meta' => 'setMeta',
-        'place' => 'setPlace'
+        'meta' => 'setMeta'
     ];
 
     /**
@@ -243,8 +238,7 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         'organization_type' => 'getOrganizationType',
         'organization_is_under_coluche_law' => 'getOrganizationIsUnderColucheLaw',
         'checkout_intent_id' => 'getCheckoutIntentId',
-        'meta' => 'getMeta',
-        'place' => 'getPlace'
+        'meta' => 'getMeta'
     ];
 
     /**
@@ -314,7 +308,6 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
         $this->setIfExists('organization_is_under_coluche_law', $data ?? [], null);
         $this->setIfExists('checkout_intent_id', $data ?? [], null);
         $this->setIfExists('meta', $data ?? [], null);
-        $this->setIfExists('place', $data ?? [], null);
     }
 
     /**
@@ -653,33 +646,6 @@ class HelloAssoApiV5ModelsStatisticsOrderLight implements ModelInterface, ArrayA
             throw new \InvalidArgumentException('non-nullable meta cannot be null');
         }
         $this->container['meta'] = $meta;
-
-        return $this;
-    }
-
-    /**
-     * Gets place
-     *
-     * @return \OpenAPI\Client\Model\HelloAssoApiV5ModelsCommonPlaceModel|null
-     */
-    public function getPlace()
-    {
-        return $this->container['place'];
-    }
-
-    /**
-     * Sets place
-     *
-     * @param \OpenAPI\Client\Model\HelloAssoApiV5ModelsCommonPlaceModel|null $place place
-     *
-     * @return self
-     */
-    public function setPlace($place)
-    {
-        if (is_null($place)) {
-            throw new \InvalidArgumentException('non-nullable place cannot be null');
-        }
-        $this->container['place'] = $place;
 
         return $this;
     }
