@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **project_target_country** | **string** | 3 letter country code | [optional]
 **allow_organism_payer** | **bool** | Whether users are allowed to contribute to this form through an organism (only for donation and crowdfunding). | [optional]
 **allow_individual_payer** | **bool** | Whether user are allowed to personally contribute to this form (only for donation and crowdfunding). | [optional]
+**display_version** | **int** | The form display version (only for donation). | [optional]
 **max_entries** | **int** | Indicates the maximum available entries for the whole form. Null means unlimited entries. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
