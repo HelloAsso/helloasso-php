@@ -16,7 +16,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `partnersMeApiClientsPut()`
 
 ```php
-partnersMeApiClientsPut($hello_asso_api_v5_models_accounts_clients_public_put_api_client_request)
+partnersMeApiClientsPut($hello_asso_api_v5_common_models_accounts_clients_public_put_api_client_request)
 ```
 
 Mise à jour du domaine
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$hello_asso_api_v5_models_accounts_clients_public_put_api_client_request = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest
+$hello_asso_api_v5_common_models_accounts_clients_public_put_api_client_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest
 
 try {
-    $apiInstance->partnersMeApiClientsPut($hello_asso_api_v5_models_accounts_clients_public_put_api_client_request);
+    $apiInstance->partnersMeApiClientsPut($hello_asso_api_v5_common_models_accounts_clients_public_put_api_client_request);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeApiClientsPut: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,7 +53,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hello_asso_api_v5_models_accounts_clients_public_put_api_client_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest**](../Model/HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest.md)|  | [optional] |
+| **hello_asso_api_v5_common_models_accounts_clients_public_put_api_client_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest**](../Model/HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -99,7 +99,7 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$notification_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
+$notification_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
 
 try {
     $apiInstance->partnersMeApiNotificationsDelete($notification_type);
@@ -112,7 +112,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **notification_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType**](../Model/.md)| Do not specify a notification type to remove the main notification Url | [optional] |
+| **notification_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType**](../Model/.md)| Do not specify a notification type to remove the main notification Url | [optional] |
 
 ### Return type
 
@@ -159,7 +159,7 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string | 
-$notification_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
+$notification_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
 
 try {
     $apiInstance->partnersMeApiNotificationsOrganizationsOrganizationSlugDelete($organization_slug, $notification_type);
@@ -173,7 +173,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**|  | |
-| **notification_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiNotificationType**](../Model/.md)| Do not specify a notification type to remove the main notification Url | [optional] |
+| **notification_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType**](../Model/.md)| Do not specify a notification type to remove the main notification Url | [optional] |
 
 ### Return type
 
@@ -195,7 +195,7 @@ void (empty response body)
 ## `partnersMeApiNotificationsOrganizationsOrganizationSlugPut()`
 
 ```php
-partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel
+partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel
 ```
 
 Mise à jour d'une URL de notification liée à une organisation
@@ -220,10 +220,10 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string | 
-$hello_asso_api_v5_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
+$hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 
 try {
-    $result = $apiInstance->partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_models_api_notifications_post_api_url_notification_body);
+    $result = $apiInstance->partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeApiNotificationsOrganizationsOrganizationSlugPut: ', $e->getMessage(), PHP_EOL;
@@ -235,11 +235,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**|  | |
-| **hello_asso_api_v5_models_api_notifications_post_api_url_notification_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody**](../Model/HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] |
+| **hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody**](../Model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ try {
 ## `partnersMeApiNotificationsPut()`
 
 ```php
-partnersMeApiNotificationsPut($hello_asso_api_v5_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel
+partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel
 ```
 
 Mise à jour de l'URL de notification principale
@@ -281,10 +281,10 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$hello_asso_api_v5_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
+$hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 
 try {
-    $result = $apiInstance->partnersMeApiNotificationsPut($hello_asso_api_v5_models_api_notifications_post_api_url_notification_body);
+    $result = $apiInstance->partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeApiNotificationsPut: ', $e->getMessage(), PHP_EOL;
@@ -295,11 +295,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hello_asso_api_v5_models_api_notifications_post_api_url_notification_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody**](../Model/HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] |
+| **hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody**](../Model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ try {
 ## `partnersMeGet()`
 
 ```php
-partnersMeGet(): \OpenAPI\Client\Model\HelloAssoApiV5ModelsPartnersPartnerPublicModel
+partnersMeGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPartnersPartnerPublicModel
 ```
 
 Récupération des informations
@@ -356,7 +356,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsPartnersPartnerPublicModel**](../Model/HelloAssoApiV5ModelsPartnersPartnerPublicModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPartnersPartnerPublicModel**](../Model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel.md)
 
 ### Authorization
 

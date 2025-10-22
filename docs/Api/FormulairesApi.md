@@ -13,7 +13,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugFormTypesGet()`
 
 ```php
-organizationsOrganizationSlugFormTypesGet($organization_slug, $states): \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]
+organizationsOrganizationSlugFormTypesGet($organization_slug, $states): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]
 ```
 
 Obtenir une liste des types de formulaires pour une organisation
@@ -38,7 +38,7 @@ $apiInstance = new OpenAPI\Client\Api\FormulairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
-$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState[] | List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState[] | List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
 
 try {
     $result = $apiInstance->organizationsOrganizationSlugFormTypesGet($organization_slug, $states);
@@ -53,11 +53,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization Slug | |
-| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState.md)| List of Form States to filter with. If none specified, it won&#39;t filter results.  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] |
+| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState.md)| List of Form States to filter with. If none specified, it won&#39;t filter results.  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]**](../Model/HelloAssoApiV5ModelsEnumsFormType.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]**](../Model/HelloAssoApiV5CommonModelsEnumsFormType.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_models_forms_form_quick_create_request): \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormQuickCreateModel
+organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateModel
 ```
 
 Créer un événement simplifié pour un organisme
@@ -100,11 +100,11 @@ $apiInstance = new OpenAPI\Client\Api\FormulairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
-$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type to create - only Event type is supported
-$hello_asso_api_v5_models_forms_form_quick_create_request = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormQuickCreateRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormQuickCreateRequest | The body of the request.
+$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType | The form type to create - only Event type is supported
+$hello_asso_api_v5_common_models_forms_form_quick_create_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest | The body of the request.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_models_forms_form_quick_create_request);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FormulairesApi->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost: ', $e->getMessage(), PHP_EOL;
@@ -116,12 +116,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization Slug | |
-| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type to create - only Event type is supported | |
-| **hello_asso_api_v5_models_forms_form_quick_create_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormQuickCreateRequest**](../Model/HelloAssoApiV5ModelsFormsFormQuickCreateRequest.md)| The body of the request. | [optional] |
+| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType**](../Model/.md)| The form type to create - only Event type is supported | |
+| **hello_asso_api_v5_common_models_forms_form_quick_create_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest**](../Model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.md)| The body of the request. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormQuickCreateModel**](../Model/HelloAssoApiV5ModelsFormsFormQuickCreateModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateModel**](../Model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ try {
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug): \OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormPublicModel
+organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormPublicModel
 ```
 
 Obtenir des données publiques détaillées sur un formulaire
@@ -164,7 +164,7 @@ $apiInstance = new OpenAPI\Client\Api\FormulairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string
-$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType
+$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType
 $form_slug = 'form_slug_example'; // string
 
 try {
@@ -180,12 +180,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**|  | |
-| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)|  | |
+| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType**](../Model/.md)|  | |
 | **form_slug** | **string**|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsFormsFormPublicModel**](../Model/HelloAssoApiV5ModelsFormsFormPublicModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormPublicModel**](../Model/HelloAssoApiV5CommonModelsFormsFormPublicModel.md)
 
 ### Authorization
 
@@ -228,8 +228,8 @@ $apiInstance = new OpenAPI\Client\Api\FormulairesApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
-$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState[] | States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
-$form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[] | Types to filter
+$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState[] | States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+$form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[] | Types to filter
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
@@ -247,8 +247,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization Slug | |
-| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormState.md)| States to filter  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] |
-| **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType.md)| Types to filter | [optional] |
+| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState.md)| States to filter  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] |
+| **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType.md)| Types to filter | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |

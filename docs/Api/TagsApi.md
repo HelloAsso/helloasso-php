@@ -10,7 +10,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `tagsTagNameGet()`
 
 ```php
-tagsTagNameGet($tag_name, $with_count, $with_amount): \OpenAPI\Client\Model\HelloAssoApiV5ModelsTagsInternalTagModel
+tagsTagNameGet($tag_name, $with_count, $with_amount): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsInternalTagModel
 ```
 
 Obtenir le détail d'un tag interne
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsTagsInternalTagModel**](../Model/HelloAssoApiV5ModelsTagsInternalTagModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsInternalTagModel**](../Model/HelloAssoApiV5CommonModelsTagsInternalTagModel.md)
 
 ### Authorization
 

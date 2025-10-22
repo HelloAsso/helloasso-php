@@ -11,7 +11,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `directoryFormsPost()`
 
 ```php
-directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_models_directory_list_forms_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel
+directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel
 ```
 
 Récupérer les formulaires
@@ -37,10 +37,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnuaireApi(
 );
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$hello_asso_api_v5_models_directory_list_forms_request = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListFormsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListFormsRequest | Body which contains the filters to apply
+$hello_asso_api_v5_common_models_directory_list_forms_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListFormsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListFormsRequest | Body which contains the filters to apply
 
 try {
-    $result = $apiInstance->directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_models_directory_list_forms_request);
+    $result = $apiInstance->directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnuaireApi->directoryFormsPost: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +53,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **hello_asso_api_v5_models_directory_list_forms_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListFormsRequest**](../Model/HelloAssoApiV5ModelsDirectoryListFormsRequest.md)| Body which contains the filters to apply | [optional] |
+| **hello_asso_api_v5_common_models_directory_list_forms_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListFormsRequest**](../Model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest.md)| Body which contains the filters to apply | [optional] |
 
 ### Return type
 
@@ -75,7 +75,7 @@ try {
 ## `directoryOrganizationsPost()`
 
 ```php
-directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_models_directory_list_organizations_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel
+directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel
 ```
 
 Récupérer les organisations
@@ -101,10 +101,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnuaireApi(
 );
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$hello_asso_api_v5_models_directory_list_organizations_request = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListOrganizationsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListOrganizationsRequest | Body which contains the filters to apply
+$hello_asso_api_v5_common_models_directory_list_organizations_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest | Body which contains the filters to apply
 
 try {
-    $result = $apiInstance->directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_models_directory_list_organizations_request);
+    $result = $apiInstance->directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnuaireApi->directoryOrganizationsPost: ', $e->getMessage(), PHP_EOL;
@@ -117,7 +117,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **hello_asso_api_v5_models_directory_list_organizations_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsDirectoryListOrganizationsRequest**](../Model/HelloAssoApiV5ModelsDirectoryListOrganizationsRequest.md)| Body which contains the filters to apply | [optional] |
+| **hello_asso_api_v5_common_models_directory_list_organizations_request** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest**](../Model/HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest.md)| Body which contains the filters to apply | [optional] |
 
 ### Return type
 

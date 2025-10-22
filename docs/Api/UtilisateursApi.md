@@ -10,7 +10,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `usersMeOrganizationsGet()`
 
 ```php
-usersMeOrganizationsGet(): \OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationOrganizationLightModel[]
+usersMeOrganizationsGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel[]
 ```
 
 Obtenir mes organisations
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsOrganizationOrganizationLightModel[]**](../Model/HelloAssoApiV5ModelsOrganizationOrganizationLightModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel[]**](../Model/HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel.md)
 
 ### Authorization
 

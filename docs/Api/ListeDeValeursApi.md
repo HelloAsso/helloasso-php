@@ -12,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `valuesCompanyLegalStatusGet()`
 
 ```php
-valuesCompanyLegalStatusGet(): \OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountCompanyLegalStatusModel[]
+valuesCompanyLegalStatusGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel[]
 ```
 
 Obtenir la liste des statuts juridiques
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountCompanyLegalStatusModel[]**](../Model/HelloAssoApiV5ModelsAccountCompanyLegalStatusModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel[]**](../Model/HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ This endpoint does not need any parameter.
 ## `valuesOrganizationCategoriesGet()`
 
 ```php
-valuesOrganizationCategoriesGet(): \OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountOrganismCategoryModel[]
+valuesOrganizationCategoriesGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel[]
 ```
 
 Obtenir la liste des catégories du JO
@@ -108,7 +108,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsAccountOrganismCategoryModel[]**](../Model/HelloAssoApiV5ModelsAccountOrganismCategoryModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel[]**](../Model/HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ This endpoint does not need any parameter.
 ## `valuesTagsGet()`
 
 ```php
-valuesTagsGet(): \OpenAPI\Client\Model\HelloAssoApiV5ModelsTagsPublicTagModel[]
+valuesTagsGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsPublicTagModel[]
 ```
 
 Obtenir la liste des tags publiques
@@ -165,7 +165,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsTagsPublicTagModel[]**](../Model/HelloAssoApiV5ModelsTagsPublicTagModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsPublicTagModel[]**](../Model/HelloAssoApiV5CommonModelsTagsPublicTagModel.md)
 
 ### Authorization
 

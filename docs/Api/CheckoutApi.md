@@ -11,7 +11,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet()`
 
 ```php
-organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet($organization_slug, $checkout_intent_id, $with_failed_refund_operation): \OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsCheckoutIntentResponse
+organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet($organization_slug, $checkout_intent_id, $with_failed_refund_operation): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse
 ```
 
 Récupérer une intention de paiement
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsCheckoutIntentResponse**](../Model/HelloAssoApiV5ModelsCartsCheckoutIntentResponse.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse**](../Model/HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `organizationsOrganizationSlugCheckoutIntentsPost()`
 
 ```php
-organizationsOrganizationSlugCheckoutIntentsPost($organization_slug, $hello_asso_api_v5_models_carts_init_checkout_body): \OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsInitCheckoutResponse
+organizationsOrganizationSlugCheckoutIntentsPost($organization_slug, $hello_asso_api_v5_common_models_carts_init_checkout_body): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsInitCheckoutResponse
 ```
 
 Initialisation d'un Checkout
@@ -100,10 +100,10 @@ $apiInstance = new OpenAPI\Client\Api\CheckoutApi(
     $config
 );
 $organization_slug = 'organization_slug_example'; // string
-$hello_asso_api_v5_models_carts_init_checkout_body = new \OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsInitCheckoutBody(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsInitCheckoutBody
+$hello_asso_api_v5_common_models_carts_init_checkout_body = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsInitCheckoutBody(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsInitCheckoutBody
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugCheckoutIntentsPost($organization_slug, $hello_asso_api_v5_models_carts_init_checkout_body);
+    $result = $apiInstance->organizationsOrganizationSlugCheckoutIntentsPost($organization_slug, $hello_asso_api_v5_common_models_carts_init_checkout_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CheckoutApi->organizationsOrganizationSlugCheckoutIntentsPost: ', $e->getMessage(), PHP_EOL;
@@ -115,11 +115,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**|  | |
-| **hello_asso_api_v5_models_carts_init_checkout_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsInitCheckoutBody**](../Model/HelloAssoApiV5ModelsCartsInitCheckoutBody.md)|  | [optional] |
+| **hello_asso_api_v5_common_models_carts_init_checkout_body** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsInitCheckoutBody**](../Model/HelloAssoApiV5CommonModelsCartsInitCheckoutBody.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsCartsInitCheckoutResponse**](../Model/HelloAssoApiV5ModelsCartsInitCheckoutResponse.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsInitCheckoutResponse**](../Model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse.md)
 
 ### Authorization
 

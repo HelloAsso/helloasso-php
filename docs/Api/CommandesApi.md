@@ -16,7 +16,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `itemsItemIdGet()`
 
 ```php
-itemsItemIdGet($item_id, $with_details): \OpenAPI\Client\Model\HelloAssoApiV5ModelsStatisticsItemDetail
+itemsItemIdGet($item_id, $with_details): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail
 ```
 
 Obtenir le détail d'un article contenu dans une commande
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsStatisticsItemDetail**](../Model/HelloAssoApiV5ModelsStatisticsItemDetail.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsItemDetail.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ void (empty response body)
 ## `ordersOrderIdGet()`
 
 ```php
-ordersOrderIdGet($order_id): \OpenAPI\Client\Model\HelloAssoApiV5ModelsStatisticsOrderDetail
+ordersOrderIdGet($order_id): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail
 ```
 
 Obtenir des informations détaillées sur une commande
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5ModelsStatisticsOrderDetail**](../Model/HelloAssoApiV5ModelsStatisticsOrderDetail.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsOrderDetail.md)
 
 ### Authorization
 
@@ -223,19 +223,19 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization slug
 $form_slug = 'form_slug_example'; // string | The form slug
-$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
 $to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$tier_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType[] | The type of tiers
-$item_states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState[] | The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
+$tier_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType[] | The type of tiers
+$item_states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState[] | The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
 $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
-$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
-$sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
+$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
+$sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
@@ -251,19 +251,19 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization slug | |
 | **form_slug** | **string**| The form slug | |
-| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
+| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
 | **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **tier_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType.md)| The type of tiers | [optional] |
-| **item_states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState.md)| The item states  Available values: * &#x60;Processed&#x60; - The item is paid and is valid * &#x60;Registered&#x60; - The item has been registered manually by the organization and is valid * &#x60;Unknown&#x60; * &#x60;Canceled&#x60; - The item has been canceled, and is no longer valid | [optional] |
+| **tier_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType.md)| The type of tiers | [optional] |
+| **item_states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState.md)| The item states  Available values: * &#x60;Processed&#x60; - The item is paid and is valid * &#x60;Registered&#x60; - The item has been registered manually by the organization and is valid * &#x60;Unknown&#x60; * &#x60;Canceled&#x60; - The item has been canceled, and is no longer valid | [optional] |
 | **tier_name** | **string**| The name of a tier | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
-| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort forms items by ascending or descending order. Default is descending | [optional] |
-| **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] |
+| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort forms items by ascending or descending order. Default is descending | [optional] |
+| **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] |
 | **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
@@ -312,7 +312,7 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 );
 $organization_slug = 'organization_slug_example'; // string | The organization slug
 $form_slug = 'form_slug_example'; // string | The form slug
-$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+$form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | First Date Filter
 $to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End Date Filter (exclusive)
 $user_search_key = 'user_search_key_example'; // string | Filter results on user or payer first name, last name or email
@@ -320,7 +320,7 @@ $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 $with_details = false; // bool | Set to true to return CustomFields
-$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
+$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
@@ -337,7 +337,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organization_slug** | **string**| The organization slug | |
 | **form_slug** | **string**| The form slug | |
-| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
+| **form_type** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType**](../Model/.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | |
 | **from** | **\DateTime**| First Date Filter | [optional] |
 | **to** | **\DateTime**| End Date Filter (exclusive) | [optional] |
 | **user_search_key** | **string**| Filter results on user or payer first name, last name or email | [optional] |
@@ -345,7 +345,7 @@ try {
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
-| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] |
+| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] |
 | **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
@@ -399,12 +399,12 @@ $user_search_key = 'user_search_key_example'; // string | Filter results on user
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$tier_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType[] | The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus
-$item_states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState[] | The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
+$tier_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType[] | The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus
+$item_states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState[] | The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
 $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
-$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
-$sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
+$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
+$sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
@@ -425,12 +425,12 @@ try {
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **tier_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsTierType.md)| The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus | [optional] |
-| **item_states** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsItemState.md)| The item states  Available values: * &#x60;Processed&#x60; - The item is paid and is valid * &#x60;Registered&#x60; - The item has been registered manually by the organization and is valid * &#x60;Unknown&#x60; * &#x60;Canceled&#x60; - The item has been canceled, and is no longer valid | [optional] |
+| **tier_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsTierType.md)| The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus | [optional] |
+| **item_states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsItemState.md)| The item states  Available values: * &#x60;Processed&#x60; - The item is paid and is valid * &#x60;Registered&#x60; - The item has been registered manually by the organization and is valid * &#x60;Unknown&#x60; * &#x60;Canceled&#x60; - The item has been canceled, and is no longer valid | [optional] |
 | **tier_name** | **string**| The name of a tier | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
-| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] |
-| **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortField**](../Model/.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] |
+| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] |
+| **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] |
 | **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
@@ -484,9 +484,9 @@ $user_search_key = 'user_search_key_example'; // string | Filter results on user
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+$form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $with_details = false; // bool | Set to true to return CustomFields
-$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
+$sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
@@ -508,9 +508,9 @@ try {
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] |
+| **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
-| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5ModelsEnumsSortOrder**](../Model/.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] |
+| **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] |
 | **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
