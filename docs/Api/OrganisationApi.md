@@ -1,5 +1,7 @@
 # OpenAPI\Client\OrganisationApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -10,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugGet()`
 
 ```php
-organizationsOrganizationSlugGet($organization_slug): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationModel
+organizationsOrganizationSlugGet($organization_slug)
 ```
 
 Obtenir le détail d'une organisation
@@ -37,8 +39,7 @@ $apiInstance = new OpenAPI\Client\Api\OrganisationApi(
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugGet($organization_slug);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugGet($organization_slug);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organizationsOrganizationSlugGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -52,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationModel**](../Model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -61,7 +62,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

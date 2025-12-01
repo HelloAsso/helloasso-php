@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **terms** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsCheckoutTerm[]**](HelloAssoApiV5CommonModelsCartsCheckoutTerm.md) | The list of future terms (if applicable) | [optional]
 **payer** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsCheckoutPayer**](HelloAssoApiV5CommonModelsCartsCheckoutPayer.md) |  | [optional]
 **metadata** | **mixed** | Metadata (optional)  Json object (max length : 20000) | [optional]
+**payment_options** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions**](HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

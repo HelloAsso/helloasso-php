@@ -1,5 +1,7 @@
 # OpenAPI\Client\FormsApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

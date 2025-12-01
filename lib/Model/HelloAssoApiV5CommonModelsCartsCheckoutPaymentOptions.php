@@ -1,6 +1,6 @@
 <?php
 /**
- * ResultsWithPaginationModelFormLightModel
+ * HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions
  *
  * PHP version 8.1
  *
@@ -32,16 +32,15 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ResultsWithPaginationModelFormLightModel Class Doc Comment
+ * HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions Class Doc Comment
  *
  * @category Class
- * @description ResultsWithPaginationModel class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayAccess, \JsonSerializable
+class HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ResultsWithPaginationModel_FormLightModel';
+    protected static $openAPIModelName = 'HelloAsso.Api.V5.Common.Models.Carts.CheckoutPaymentOptions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +57,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormLightModel[]',
-        'pagination' => '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonPaginationModel'
+        'enable_sepa' => 'bool'
     ];
 
     /**
@@ -70,8 +68,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'pagination' => null
+        'enable_sepa' => null
     ];
 
     /**
@@ -80,8 +77,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => true,
-        'pagination' => false
+        'enable_sepa' => false
     ];
 
     /**
@@ -170,8 +166,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'pagination' => 'pagination'
+        'enable_sepa' => 'enableSepa'
     ];
 
     /**
@@ -180,8 +175,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'pagination' => 'setPagination'
+        'enable_sepa' => 'setEnableSepa'
     ];
 
     /**
@@ -190,8 +184,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'pagination' => 'getPagination'
+        'enable_sepa' => 'getEnableSepa'
     ];
 
     /**
@@ -251,8 +244,7 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('pagination', $data ?? [], null);
+        $this->setIfExists('enable_sepa', $data ?? [], null);
     }
 
     /**
@@ -298,62 +290,28 @@ class ResultsWithPaginationModelFormLightModel implements ModelInterface, ArrayA
 
 
     /**
-     * Gets data
+     * Gets enable_sepa
      *
-     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormLightModel[]|null
+     * @return bool|null
      */
-    public function getData()
+    public function getEnableSepa()
     {
-        return $this->container['data'];
+        return $this->container['enable_sepa'];
     }
 
     /**
-     * Sets data
+     * Sets enable_sepa
      *
-     * @param \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormLightModel[]|null $data Data property
+     * @param bool|null $enable_sepa Metadata (optional)  Whether if this checkout is eligible for SEPA payment
      *
      * @return self
      */
-    public function setData($data)
+    public function setEnableSepa($enable_sepa)
     {
-        if (is_null($data)) {
-            array_push($this->openAPINullablesSetToNull, 'data');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($enable_sepa)) {
+            throw new \InvalidArgumentException('non-nullable enable_sepa cannot be null');
         }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets pagination
-     *
-     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonPaginationModel|null
-     */
-    public function getPagination()
-    {
-        return $this->container['pagination'];
-    }
-
-    /**
-     * Sets pagination
-     *
-     * @param \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonPaginationModel|null $pagination pagination
-     *
-     * @return self
-     */
-    public function setPagination($pagination)
-    {
-        if (is_null($pagination)) {
-            throw new \InvalidArgumentException('non-nullable pagination cannot be null');
-        }
-        $this->container['pagination'] = $pagination;
+        $this->container['enable_sepa'] = $enable_sepa;
 
         return $this;
     }

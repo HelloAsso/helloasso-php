@@ -1,5 +1,7 @@
 # OpenAPI\Client\CommandesApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -16,7 +18,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `itemsItemIdGet()`
 
 ```php
-itemsItemIdGet($item_id, $with_details): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail
+itemsItemIdGet($item_id, $with_details)
 ```
 
 Obtenir le détail d'un article contenu dans une commande
@@ -44,8 +46,7 @@ $item_id = 56; // int | The item ID
 $with_details = false; // bool | Set to true to return CustomFields and Options
 
 try {
-    $result = $apiInstance->itemsItemIdGet($item_id, $with_details);
-    print_r($result);
+    $apiInstance->itemsItemIdGet($item_id, $with_details);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->itemsItemIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -60,7 +61,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsItemDetail.md)
+void (empty response body)
 
 ### Authorization
 
@@ -69,7 +70,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -137,7 +138,7 @@ void (empty response body)
 ## `ordersOrderIdGet()`
 
 ```php
-ordersOrderIdGet($order_id): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail
+ordersOrderIdGet($order_id)
 ```
 
 Obtenir des informations détaillées sur une commande
@@ -164,8 +165,7 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 $order_id = 56; // int
 
 try {
-    $result = $apiInstance->ordersOrderIdGet($order_id);
-    print_r($result);
+    $apiInstance->ordersOrderIdGet($order_id);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->ordersOrderIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsOrderDetail.md)
+void (empty response body)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -197,7 +197,7 @@ try {
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count)
+organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelItem
 ```
 
 Obtenir une liste d'articles vendus dans un formulaire
@@ -239,7 +239,8 @@ $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -268,7 +269,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelItem**](../Model/ResultsWithPaginationModelItem.md)
 
 ### Authorization
 
@@ -277,7 +278,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
+- **Accept**: `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -286,7 +287,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count)
 ```
 
 Obtenir les commandes d'un formulaire
@@ -324,8 +325,7 @@ $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -350,7 +350,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
+void (empty response body)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -368,7 +368,7 @@ try {
 ## `organizationsOrganizationSlugItemsGet()`
 
 ```php
-organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count)
+organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelItem
 ```
 
 Obtenir une liste d'articles vendus par une organisation
@@ -408,7 +408,8 @@ $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugItemsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -435,7 +436,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelItem**](../Model/ResultsWithPaginationModelItem.md)
 
 ### Authorization
 
@@ -444,7 +445,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
+- **Accept**: `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -453,7 +454,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count)
 ```
 
 Obtenir les commandes d'une organisation
@@ -490,8 +491,7 @@ $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugOrdersGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -515,7 +515,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
+void (empty response body)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

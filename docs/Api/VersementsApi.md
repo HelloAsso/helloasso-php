@@ -1,5 +1,7 @@
 # OpenAPI\Client\VersementsApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -10,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugCashOutCashOutIdExportGet()`
 
 ```php
-organizationsOrganizationSlugCashOutCashOutIdExportGet($organization_slug, $cash_out_id): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel[]
+organizationsOrganizationSlugCashOutCashOutIdExportGet($organization_slug, $cash_out_id)
 ```
 
 Détails d'un versement
@@ -38,8 +40,7 @@ $organization_slug = 'organization_slug_example'; // string | The organization s
 $cash_out_id = 56; // int | The cash-out id to details
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugCashOutCashOutIdExportGet($organization_slug, $cash_out_id);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugCashOutCashOutIdExportGet($organization_slug, $cash_out_id);
 } catch (Exception $e) {
     echo 'Exception when calling VersementsApi->organizationsOrganizationSlugCashOutCashOutIdExportGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -54,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel[]**](../Model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -63,7 +64,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

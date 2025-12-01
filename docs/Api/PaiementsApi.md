@@ -1,5 +1,7 @@
 # OpenAPI\Client\PaiementsApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -13,7 +15,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count)
 ```
 
 Obtenir les informations des paiements effectués sur un formulaire
@@ -52,8 +54,7 @@ $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -79,7 +80,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelPayment**](../Model/ResultsWithPaginationModelPayment.md)
+void (empty response body)
 
 ### Authorization
 
@@ -88,7 +89,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -97,7 +98,7 @@ try {
 ## `organizationsOrganizationSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count)
+organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
 ```
 
 Obtenir les informations des paiements effectués sur une organisation
@@ -134,7 +135,8 @@ $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Comm
 $with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->organizationsOrganizationSlugPaymentsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -158,7 +160,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelPayment**](../Model/ResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -167,7 +169,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
+- **Accept**: `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -176,7 +178,7 @@ void (empty response body)
 ## `paymentsPaymentIdGet()`
 
 ```php
-paymentsPaymentIdGet($payment_id, $with_failed_refund_operation): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPaymentDetail
+paymentsPaymentIdGet($payment_id, $with_failed_refund_operation)
 ```
 
 Obtenir les informations détaillées d'un paiement.
@@ -204,8 +206,7 @@ $payment_id = 56; // int | The payment identifier.
 $with_failed_refund_operation = false; // bool | True to retrieve the refund operation in the states 'ABORTED', 'CANCELED', 'ERROR', 'REFUSED'.
 
 try {
-    $result = $apiInstance->paymentsPaymentIdGet($payment_id, $with_failed_refund_operation);
-    print_r($result);
+    $apiInstance->paymentsPaymentIdGet($payment_id, $with_failed_refund_operation);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->paymentsPaymentIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -220,7 +221,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPaymentDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail.md)
+void (empty response body)
 
 ### Authorization
 
@@ -229,7 +230,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -238,7 +239,7 @@ try {
 ## `paymentsPaymentIdRefundPost()`
 
 ```php
-paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentRefundOperationModel
+paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount)
 ```
 
 Rembourser un paiement.
@@ -269,8 +270,7 @@ $send_refund_mail = true; // bool | Whether a refund mail must be sent or not.
 $amount = 0; // int | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
 
 try {
-    $result = $apiInstance->paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount);
-    print_r($result);
+    $apiInstance->paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->paymentsPaymentIdRefundPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -288,7 +288,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentRefundOperationModel**](../Model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

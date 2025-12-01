@@ -1,5 +1,7 @@
 # OpenAPI\Client\PartenairesApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -195,7 +197,7 @@ void (empty response body)
 ## `partnersMeApiNotificationsOrganizationsOrganizationSlugPut()`
 
 ```php
-partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel
+partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body)
 ```
 
 Mise à jour d'une URL de notification liée à une organisation
@@ -223,8 +225,7 @@ $organization_slug = 'organization_slug_example'; // string |
 $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 
 try {
-    $result = $apiInstance->partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
-    print_r($result);
+    $apiInstance->partnersMeApiNotificationsOrganizationsOrganizationSlugPut($organization_slug, $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeApiNotificationsOrganizationsOrganizationSlugPut: ', $e->getMessage(), PHP_EOL;
 }
@@ -239,7 +240,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -248,7 +249,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json-patch+json`, `application/json`, `text/json`, `application/*+json`
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -257,7 +258,7 @@ try {
 ## `partnersMeApiNotificationsPut()`
 
 ```php
-partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel
+partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body)
 ```
 
 Mise à jour de l'URL de notification principale
@@ -284,8 +285,7 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
 $hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 
 try {
-    $result = $apiInstance->partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
-    print_r($result);
+    $apiInstance->partnersMeApiNotificationsPut($hello_asso_api_v5_common_models_api_notifications_post_api_url_notification_body);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeApiNotificationsPut: ', $e->getMessage(), PHP_EOL;
 }
@@ -299,7 +299,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](../Model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json-patch+json`, `application/json`, `text/json`, `application/*+json`
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -317,7 +317,7 @@ try {
 ## `partnersMeGet()`
 
 ```php
-partnersMeGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPartnersPartnerPublicModel
+partnersMeGet()
 ```
 
 Récupération des informations
@@ -343,8 +343,7 @@ $apiInstance = new OpenAPI\Client\Api\PartenairesApi(
 );
 
 try {
-    $result = $apiInstance->partnersMeGet();
-    print_r($result);
+    $apiInstance->partnersMeGet();
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -356,7 +355,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPartnersPartnerPublicModel**](../Model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -365,7 +364,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -374,7 +373,7 @@ This endpoint does not need any parameter.
 ## `partnersMeOrganizationsGet()`
 
 ```php
-partnersMeOrganizationsGet($page_size, $continuation_token): \OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel
+partnersMeOrganizationsGet($page_size, $continuation_token)
 ```
 
 Obtenir toutes les organisations
@@ -402,8 +401,7 @@ $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 
 try {
-    $result = $apiInstance->partnersMeOrganizationsGet($page_size, $continuation_token);
-    print_r($result);
+    $apiInstance->partnersMeOrganizationsGet($page_size, $continuation_token);
 } catch (Exception $e) {
     echo 'Exception when calling PartenairesApi->partnersMeOrganizationsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -418,7 +416,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel**](../Model/ResultsWithPaginationModelPartnerOrganizationModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -427,7 +425,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

@@ -1,5 +1,7 @@
 # OpenAPI\Client\UtilisateursApi
 
+
+
 All URIs are relative to https://api.helloasso.com/v5, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -10,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `usersMeOrganizationsGet()`
 
 ```php
-usersMeOrganizationsGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel[]
+usersMeOrganizationsGet()
 ```
 
 Obtenir mes organisations
@@ -36,8 +38,7 @@ $apiInstance = new OpenAPI\Client\Api\UtilisateursApi(
 );
 
 try {
-    $result = $apiInstance->usersMeOrganizationsGet();
-    print_r($result);
+    $apiInstance->usersMeOrganizationsGet();
 } catch (Exception $e) {
     echo 'Exception when calling UtilisateursApi->usersMeOrganizationsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -49,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel[]**](../Model/HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel.md)
+void (empty response body)
 
 ### Authorization
 
@@ -58,7 +59,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `application/json`, `text/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
