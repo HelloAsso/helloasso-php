@@ -1056,7 +1056,7 @@ class FormulairesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel
      */
     public function organizationsOrganizationSlugFormsGet($organization_slug, $states = null, $form_types = null, $page_index = 1, $page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsGet'][0])
     {
@@ -1079,7 +1079,7 @@ class FormulairesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function organizationsOrganizationSlugFormsGetWithHttpInfo($organization_slug, $states = null, $form_types = null, $page_index = 1, $page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsGet'][0])
     {
@@ -1111,7 +1111,7 @@ class FormulairesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel',
                         $request,
                         $response,
                     );
@@ -1133,7 +1133,7 @@ class FormulairesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel',
                 $request,
                 $response,
             );
@@ -1142,7 +1142,7 @@ class FormulairesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1198,7 +1198,7 @@ class FormulairesApi
      */
     public function organizationsOrganizationSlugFormsGetAsyncWithHttpInfo($organization_slug, $states = null, $form_types = null, $page_index = 1, $page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel';
         $request = $this->organizationsOrganizationSlugFormsGetRequest($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token, $contentType);
 
         return $this->client

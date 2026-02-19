@@ -1401,7 +1401,7 @@ class CommandesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
@@ -1429,7 +1429,7 @@ class CommandesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
@@ -1461,7 +1461,7 @@ class CommandesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                         $request,
                         $response,
                     );
@@ -1483,7 +1483,7 @@ class CommandesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                 $request,
                 $response,
             );
@@ -1492,7 +1492,7 @@ class CommandesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1558,7 +1558,7 @@ class CommandesApi
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder';
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $contentType);
 
         return $this->client
@@ -2234,7 +2234,7 @@ class CommandesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder
      */
     public function organizationsOrganizationSlugOrdersGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
@@ -2261,7 +2261,7 @@ class CommandesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
      */
     public function organizationsOrganizationSlugOrdersGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
@@ -2293,7 +2293,7 @@ class CommandesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                         $request,
                         $response,
                     );
@@ -2315,7 +2315,7 @@ class CommandesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                 $request,
                 $response,
             );
@@ -2324,7 +2324,7 @@ class CommandesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2388,7 +2388,7 @@ class CommandesApi
      */
     public function organizationsOrganizationSlugOrdersGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $form_types = null, $with_details = false, $sort_order = null, string $contentType = self::contentTypes['organizationsOrganizationSlugOrdersGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelOrder';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder';
         $request = $this->organizationsOrganizationSlugOrdersGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $contentType);
 
         return $this->client

@@ -15,7 +15,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
 ```
 
 Obtenir les informations des paiements effectués sur un formulaire
@@ -79,7 +79,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelPayment**](../Model/ResultsWithPaginationModelPayment.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ try {
 ## `organizationsOrganizationSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
 ```
 
 Obtenir les informations des paiements effectués sur une organisation
@@ -157,7 +157,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelPayment**](../Model/ResultsWithPaginationModelPayment.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment.md)
 
 ### Authorization
 

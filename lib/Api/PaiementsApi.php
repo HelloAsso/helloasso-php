@@ -155,7 +155,7 @@ class PaiementsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
@@ -184,7 +184,7 @@ class PaiementsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelPayment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment, HTTP status code, HTTP response headers (array of strings)
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
@@ -216,7 +216,7 @@ class PaiementsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class PaiementsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                 $request,
                 $response,
             );
@@ -247,7 +247,7 @@ class PaiementsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class PaiementsApi
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment';
         $request = $this->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetRequest($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $contentType);
 
         return $this->client
@@ -600,7 +600,7 @@ class PaiementsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
      */
     public function organizationsOrganizationSlugPaymentsGet($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
@@ -627,7 +627,7 @@ class PaiementsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelPayment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment, HTTP status code, HTTP response headers (array of strings)
      */
     public function organizationsOrganizationSlugPaymentsGetWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
@@ -659,7 +659,7 @@ class PaiementsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                         $request,
                         $response,
                     );
@@ -681,7 +681,7 @@ class PaiementsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                 $request,
                 $response,
             );
@@ -690,7 +690,7 @@ class PaiementsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +754,7 @@ class PaiementsApi
      */
     public function organizationsOrganizationSlugPaymentsGetAsyncWithHttpInfo($organization_slug, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $states = null, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugPaymentsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelPayment';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment';
         $request = $this->organizationsOrganizationSlugPaymentsGetRequest($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $contentType);
 
         return $this->client

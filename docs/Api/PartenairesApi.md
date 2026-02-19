@@ -376,7 +376,7 @@ This endpoint does not need any parameter.
 ## `partnersMeOrganizationsGet()`
 
 ```php
-partnersMeOrganizationsGet($page_size, $continuation_token): \OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel
+partnersMeOrganizationsGet($page_size, $continuation_token): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel
 ```
 
 Obtenir toutes les organisations
@@ -420,7 +420,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel**](../Model/ResultsWithPaginationModelPartnerOrganizationModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel.md)
 
 ### Authorization
 

@@ -146,7 +146,7 @@ class AnnuaireApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel
      */
     public function directoryFormsPost($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_forms_request = null, string $contentType = self::contentTypes['directoryFormsPost'][0])
     {
@@ -166,7 +166,7 @@ class AnnuaireApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function directoryFormsPostWithHttpInfo($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_forms_request = null, string $contentType = self::contentTypes['directoryFormsPost'][0])
     {
@@ -198,7 +198,7 @@ class AnnuaireApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel',
                         $request,
                         $response,
                     );
@@ -220,7 +220,7 @@ class AnnuaireApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel',
                 $request,
                 $response,
             );
@@ -229,7 +229,7 @@ class AnnuaireApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -279,7 +279,7 @@ class AnnuaireApi
      */
     public function directoryFormsPostAsyncWithHttpInfo($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_forms_request = null, string $contentType = self::contentTypes['directoryFormsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel';
         $request = $this->directoryFormsPostRequest($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request, $contentType);
 
         return $this->client
@@ -441,7 +441,7 @@ class AnnuaireApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel
      */
     public function directoryOrganizationsPost($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_organizations_request = null, string $contentType = self::contentTypes['directoryOrganizationsPost'][0])
     {
@@ -461,7 +461,7 @@ class AnnuaireApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function directoryOrganizationsPostWithHttpInfo($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_organizations_request = null, string $contentType = self::contentTypes['directoryOrganizationsPost'][0])
     {
@@ -493,7 +493,7 @@ class AnnuaireApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel',
                         $request,
                         $response,
                     );
@@ -515,7 +515,7 @@ class AnnuaireApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel',
                 $request,
                 $response,
             );
@@ -524,7 +524,7 @@ class AnnuaireApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -574,7 +574,7 @@ class AnnuaireApi
      */
     public function directoryOrganizationsPostAsyncWithHttpInfo($page_size = 20, $continuation_token = null, $hello_asso_api_v5_common_models_directory_list_organizations_request = null, string $contentType = self::contentTypes['directoryOrganizationsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel';
         $request = $this->directoryOrganizationsPostRequest($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request, $contentType);
 
         return $this->client

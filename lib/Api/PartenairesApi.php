@@ -1634,7 +1634,7 @@ class PartenairesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel
      */
     public function partnersMeOrganizationsGet($page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['partnersMeOrganizationsGet'][0])
     {
@@ -1653,7 +1653,7 @@ class PartenairesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function partnersMeOrganizationsGetWithHttpInfo($page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['partnersMeOrganizationsGet'][0])
     {
@@ -1685,7 +1685,7 @@ class PartenairesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel',
                         $request,
                         $response,
                     );
@@ -1707,7 +1707,7 @@ class PartenairesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel',
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel',
                 $request,
                 $response,
             );
@@ -1716,7 +1716,7 @@ class PartenairesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel',
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1764,7 +1764,7 @@ class PartenairesApi
      */
     public function partnersMeOrganizationsGetAsyncWithHttpInfo($page_size = 20, $continuation_token = null, string $contentType = self::contentTypes['partnersMeOrganizationsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResultsWithPaginationModelPartnerOrganizationModel';
+        $returnType = '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel';
         $request = $this->partnersMeOrganizationsGetRequest($page_size, $continuation_token, $contentType);
 
         return $this->client

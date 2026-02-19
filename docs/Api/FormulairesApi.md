@@ -205,7 +205,7 @@ try {
 ## `organizationsOrganizationSlugFormsGet()`
 
 ```php
-organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token): \OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel
+organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel
 ```
 
 Obtenir les formulaires d'une organisation
@@ -257,7 +257,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel**](../Model/ResultsWithPaginationModelFormLightModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel.md)
 
 ### Authorization
 

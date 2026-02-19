@@ -288,7 +288,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder
 ```
 
 Obtenir les commandes d'un formulaire
@@ -350,7 +350,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -451,7 +451,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
+organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder
 ```
 
 Obtenir les commandes d'une organisation
@@ -511,7 +511,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder.md)
 
 ### Authorization
 

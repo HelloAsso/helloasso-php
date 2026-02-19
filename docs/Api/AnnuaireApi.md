@@ -13,7 +13,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `directoryFormsPost()`
 
 ```php
-directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel
+directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel
 ```
 
 Récupérer les formulaires
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel**](../Model/ResultsWithPaginationModelSynchronizableFormModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `directoryOrganizationsPost()`
 
 ```php
-directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel
+directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel
 ```
 
 Récupérer les organisations
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel**](../Model/ResultsWithPaginationModelSynchronizableOrganizationModel.md)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel**](../Model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel.md)
 
 ### Authorization
 
