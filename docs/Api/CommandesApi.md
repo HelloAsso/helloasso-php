@@ -18,7 +18,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `itemsItemIdGet()`
 
 ```php
-itemsItemIdGet($item_id, $with_details)
+itemsItemIdGet($item_id, $with_details): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail
 ```
 
 Obtenir le détail d'un article contenu dans une commande
@@ -46,7 +46,8 @@ $item_id = 56; // int | The item ID
 $with_details = false; // bool | Set to true to return CustomFields and Options
 
 try {
-    $apiInstance->itemsItemIdGet($item_id, $with_details);
+    $result = $apiInstance->itemsItemIdGet($item_id, $with_details);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->itemsItemIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -61,7 +62,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsItemDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsItemDetail.md)
 
 ### Authorization
 
@@ -70,7 +71,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -138,7 +139,7 @@ void (empty response body)
 ## `ordersOrderIdGet()`
 
 ```php
-ordersOrderIdGet($order_id)
+ordersOrderIdGet($order_id, $with_form_data): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail
 ```
 
 Obtenir des informations détaillées sur une commande
@@ -162,10 +163,12 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int
+$order_id = 56; // int | The order ID
+$with_form_data = false; // bool | Set to true to include form data in the response
 
 try {
-    $apiInstance->ordersOrderIdGet($order_id);
+    $result = $apiInstance->ordersOrderIdGet($order_id, $with_form_data);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->ordersOrderIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -175,11 +178,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **order_id** | **int**|  | |
+| **order_id** | **int**| The order ID | |
+| **with_form_data** | **bool**| Set to true to include form data in the response | [optional] [default to false] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsOrderDetail.md)
 
 ### Authorization
 
@@ -188,7 +192,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -197,7 +201,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelItem
+organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field)
 ```
 
 Obtenir une liste d'articles vendus dans un formulaire
@@ -236,11 +240,9 @@ $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -265,11 +267,10 @@ try {
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort forms items by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelItem**](../Model/ResultsWithPaginationModelItem.md)
+void (empty response body)
 
 ### Authorization
 
@@ -278,7 +279,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/csv`
+- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -287,7 +288,7 @@ try {
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count)
+organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
 ```
 
 Obtenir les commandes d'un formulaire
@@ -322,10 +323,10 @@ $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 $with_details = false; // bool | Set to true to return CustomFields
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $with_details, $sort_order);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -346,11 +347,10 @@ try {
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -368,7 +368,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugItemsGet()`
 
 ```php
-organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelItem
+organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field)
 ```
 
 Obtenir une liste d'articles vendus par une organisation
@@ -405,11 +405,9 @@ $tier_name = 'tier_name_example'; // string | The name of a tier
 $with_details = false; // bool | Set to true to return CustomFields and Options
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $with_count);
-    print_r($result);
+    $apiInstance->organizationsOrganizationSlugItemsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugItemsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -432,11 +430,10 @@ try {
 | **with_details** | **bool**| Set to true to return CustomFields and Options | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResultsWithPaginationModelItem**](../Model/ResultsWithPaginationModelItem.md)
+void (empty response body)
 
 ### Authorization
 
@@ -445,7 +442,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/csv`
+- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -454,7 +451,7 @@ try {
 ## `organizationsOrganizationSlugOrdersGet()`
 
 ```php
-organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count)
+organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order): \OpenAPI\Client\Model\ResultsWithPaginationModelOrder
 ```
 
 Obtenir les commandes d'une organisation
@@ -488,10 +485,10 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $form_types = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 $with_details = false; // bool | Set to true to return CustomFields
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugOrdersGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $form_types, $with_details, $sort_order);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->organizationsOrganizationSlugOrdersGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -511,11 +508,10 @@ try {
 | **form_types** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] |
 | **with_details** | **bool**| Set to true to return CustomFields | [optional] [default to false] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelOrder**](../Model/ResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -524,7 +520,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

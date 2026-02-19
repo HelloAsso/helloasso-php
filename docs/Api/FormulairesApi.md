@@ -15,7 +15,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugFormTypesGet()`
 
 ```php
-organizationsOrganizationSlugFormTypesGet($organization_slug, $states)
+organizationsOrganizationSlugFormTypesGet($organization_slug, $states): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]
 ```
 
 Obtenir une liste des types de formulaires pour une organisation
@@ -43,7 +43,8 @@ $organization_slug = 'organization_slug_example'; // string | The organization S
 $states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormState[] | List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormTypesGet($organization_slug, $states);
+    $result = $apiInstance->organizationsOrganizationSlugFormTypesGet($organization_slug, $states);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FormulairesApi->organizationsOrganizationSlugFormTypesGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -58,7 +59,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsFormType[]**](../Model/HelloAssoApiV5CommonModelsEnumsFormType.md)
 
 ### Authorization
 
@@ -67,7 +68,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -76,7 +77,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request)
+organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateModel
 ```
 
 Créer un événement simplifié pour un organisme
@@ -105,7 +106,8 @@ $form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Commo
 $hello_asso_api_v5_common_models_forms_form_quick_create_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest | The body of the request.
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost($organization_slug, $form_type, $hello_asso_api_v5_common_models_forms_form_quick_create_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FormulairesApi->organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost: ', $e->getMessage(), PHP_EOL;
 }
@@ -121,7 +123,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormQuickCreateModel**](../Model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel.md)
 
 ### Authorization
 
@@ -130,7 +132,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json-patch+json`, `application/json`, `text/json`, `application/*+json`
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -139,7 +141,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug)
+organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormPublicModel
 ```
 
 Obtenir des données publiques détaillées sur un formulaire
@@ -168,7 +170,8 @@ $form_type = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5Commo
 $form_slug = 'form_slug_example'; // string
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet($organization_slug, $form_type, $form_slug);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FormulairesApi->organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -184,7 +187,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsFormsFormPublicModel**](../Model/HelloAssoApiV5CommonModelsFormsFormPublicModel.md)
 
 ### Authorization
 
@@ -193,7 +196,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -202,7 +205,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugFormsGet()`
 
 ```php
-organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token)
+organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token): \OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel
 ```
 
 Obtenir les formulaires d'une organisation
@@ -234,7 +237,8 @@ $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token);
+    $result = $apiInstance->organizationsOrganizationSlugFormsGet($organization_slug, $states, $form_types, $page_index, $page_size, $continuation_token);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FormulairesApi->organizationsOrganizationSlugFormsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -253,7 +257,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelFormLightModel**](../Model/ResultsWithPaginationModelFormLightModel.md)
 
 ### Authorization
 
@@ -262,7 +266,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

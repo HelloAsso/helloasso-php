@@ -12,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `tagsTagNameGet()`
 
 ```php
-tagsTagNameGet($tag_name, $with_count, $with_amount)
+tagsTagNameGet($tag_name, $with_count, $with_amount): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsInternalTagModel
 ```
 
 Obtenir le détail d'un tag interne
@@ -41,7 +41,8 @@ $with_count = false; // bool | If true : Count of times Tag is used
 $with_amount = false; // bool | If true : Amount collected by all forms linked to this Tag
 
 try {
-    $apiInstance->tagsTagNameGet($tag_name, $with_count, $with_amount);
+    $result = $apiInstance->tagsTagNameGet($tag_name, $with_count, $with_amount);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->tagsTagNameGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -57,7 +58,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsInternalTagModel**](../Model/HelloAssoApiV5CommonModelsTagsInternalTagModel.md)
 
 ### Authorization
 
@@ -66,7 +67,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

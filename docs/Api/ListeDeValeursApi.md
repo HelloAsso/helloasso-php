@@ -14,7 +14,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `valuesCompanyLegalStatusGet()`
 
 ```php
-valuesCompanyLegalStatusGet()
+valuesCompanyLegalStatusGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel[]
 ```
 
 Obtenir la liste des statuts juridiques
@@ -40,7 +40,8 @@ $apiInstance = new OpenAPI\Client\Api\ListeDeValeursApi(
 );
 
 try {
-    $apiInstance->valuesCompanyLegalStatusGet();
+    $result = $apiInstance->valuesCompanyLegalStatusGet();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListeDeValeursApi->valuesCompanyLegalStatusGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -52,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel[]**](../Model/HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel.md)
 
 ### Authorization
 
@@ -61,7 +62,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -70,7 +71,7 @@ void (empty response body)
 ## `valuesOrganizationCategoriesGet()`
 
 ```php
-valuesOrganizationCategoriesGet()
+valuesOrganizationCategoriesGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel[]
 ```
 
 Obtenir la liste des catégories du JO
@@ -96,7 +97,8 @@ $apiInstance = new OpenAPI\Client\Api\ListeDeValeursApi(
 );
 
 try {
-    $apiInstance->valuesOrganizationCategoriesGet();
+    $result = $apiInstance->valuesOrganizationCategoriesGet();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListeDeValeursApi->valuesOrganizationCategoriesGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -108,7 +110,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel[]**](../Model/HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel.md)
 
 ### Authorization
 
@@ -117,7 +119,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -126,7 +128,7 @@ void (empty response body)
 ## `valuesTagsGet()`
 
 ```php
-valuesTagsGet()
+valuesTagsGet(): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsPublicTagModel[]
 ```
 
 Obtenir la liste des tags publiques
@@ -152,7 +154,8 @@ $apiInstance = new OpenAPI\Client\Api\ListeDeValeursApi(
 );
 
 try {
-    $apiInstance->valuesTagsGet();
+    $result = $apiInstance->valuesTagsGet();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListeDeValeursApi->valuesTagsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -164,7 +167,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsTagsPublicTagModel[]**](../Model/HelloAssoApiV5CommonModelsTagsPublicTagModel.md)
 
 ### Authorization
 
@@ -173,7 +176,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

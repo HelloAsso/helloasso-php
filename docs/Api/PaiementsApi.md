@@ -15,7 +15,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count)
+organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
 ```
 
 Obtenir les informations des paiements effectués sur un formulaire
@@ -48,13 +48,13 @@ $user_search_key = 'user_search_key_example'; // string | Filter results on user
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor * `WaitingBankValidation` - The payment is pending validation from the bank (used by SEPA direct debit).
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -73,14 +73,13 @@ try {
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] |
+| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor * &#x60;WaitingBankValidation&#x60; - The payment is pending validation from the bank (used by SEPA direct debit). | [optional] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort payments by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelPayment**](../Model/ResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -89,7 +88,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -98,7 +97,7 @@ void (empty response body)
 ## `organizationsOrganizationSlugPaymentsGet()`
 
 ```php
-organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
+organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field): \OpenAPI\Client\Model\ResultsWithPaginationModelPayment
 ```
 
 Obtenir les informations des paiements effectués sur une organisation
@@ -129,13 +128,12 @@ $user_search_key = 'user_search_key_example'; // string | Filter results on user
 $page_index = 1; // int | The page of results to retrieve
 $page_size = 20; // int | The number of items per page
 $continuation_token = 'continuation_token_example'; // string | Continuation Token from which we wish to retrieve results
-$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+$states = array(new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState()); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor * `WaitingBankValidation` - The payment is pending validation from the bank (used by SEPA direct debit).
 $sort_order = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
 $sort_field = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-$with_count = false; // bool | Whether the pagination should include totalCount and totalPages.
 
 try {
-    $result = $apiInstance->organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field, $with_count);
+    $result = $apiInstance->organizationsOrganizationSlugPaymentsGet($organization_slug, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $states, $sort_order, $sort_field);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->organizationsOrganizationSlugPaymentsGet: ', $e->getMessage(), PHP_EOL;
@@ -153,10 +151,9 @@ try {
 | **page_index** | **int**| The page of results to retrieve | [optional] [default to 1] |
 | **page_size** | **int**| The number of items per page | [optional] [default to 20] |
 | **continuation_token** | **string**| Continuation Token from which we wish to retrieve results | [optional] |
-| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] |
+| **states** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState[]**](../Model/\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor * &#x60;WaitingBankValidation&#x60; - The payment is pending validation from the bank (used by SEPA direct debit). | [optional] |
 | **sort_order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortOrder**](../Model/.md)| Sort payments by ascending or descending order. Default is descending | [optional] |
 | **sort_field** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField**](../Model/.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] |
-| **with_count** | **bool**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false] |
 
 ### Return type
 
@@ -169,7 +166,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/csv`
+- **Accept**: `application/json`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `text/csv`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -178,7 +175,7 @@ try {
 ## `paymentsPaymentIdGet()`
 
 ```php
-paymentsPaymentIdGet($payment_id, $with_failed_refund_operation)
+paymentsPaymentIdGet($payment_id, $with_failed_refund_operation): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPaymentDetail
 ```
 
 Obtenir les informations détaillées d'un paiement.
@@ -206,7 +203,8 @@ $payment_id = 56; // int | The payment identifier.
 $with_failed_refund_operation = false; // bool | True to retrieve the refund operation in the states 'ABORTED', 'CANCELED', 'ERROR', 'REFUSED'.
 
 try {
-    $apiInstance->paymentsPaymentIdGet($payment_id, $with_failed_refund_operation);
+    $result = $apiInstance->paymentsPaymentIdGet($payment_id, $with_failed_refund_operation);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->paymentsPaymentIdGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -221,7 +219,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPaymentDetail**](../Model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail.md)
 
 ### Authorization
 
@@ -230,7 +228,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -239,7 +237,7 @@ void (empty response body)
 ## `paymentsPaymentIdRefundPost()`
 
 ```php
-paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount)
+paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount, $x_mfa_access_authorization, $x_mfa_sms_access_authorization, $x_mfa_password_authorization): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentRefundOperationModel
 ```
 
 Rembourser un paiement.
@@ -268,9 +266,13 @@ $comment = 'comment_example'; // string | The comment about this refund.
 $cancel_order = false; // bool | Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded)
 $send_refund_mail = true; // bool | Whether a refund mail must be sent or not.
 $amount = 0; // int | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+$x_mfa_access_authorization = 'x_mfa_access_authorization_example'; // string | Must be filled only if AuthorizationErrors.MFA.AccessTokenRequired error code was returned previously.
+$x_mfa_sms_access_authorization = 'x_mfa_sms_access_authorization_example'; // string | Must be filled only if AuthorizationErrors.MFA.AccessOtpSmsRequired error code was returned previously.
+$x_mfa_password_authorization = 'x_mfa_password_authorization_example'; // string | Must be filled only if AuthorizationErrors.MFA.AccessPasswordTokenRequired error code was returned previously.
 
 try {
-    $apiInstance->paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount);
+    $result = $apiInstance->paymentsPaymentIdRefundPost($payment_id, $comment, $cancel_order, $send_refund_mail, $amount, $x_mfa_access_authorization, $x_mfa_sms_access_authorization, $x_mfa_password_authorization);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaiementsApi->paymentsPaymentIdRefundPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -285,10 +287,13 @@ try {
 | **cancel_order** | **bool**| Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) | [optional] [default to false] |
 | **send_refund_mail** | **bool**| Whether a refund mail must be sent or not. | [optional] [default to true] |
 | **amount** | **int**| The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0] |
+| **x_mfa_access_authorization** | **string**| Must be filled only if AuthorizationErrors.MFA.AccessTokenRequired error code was returned previously. | [optional] |
+| **x_mfa_sms_access_authorization** | **string**| Must be filled only if AuthorizationErrors.MFA.AccessOtpSmsRequired error code was returned previously. | [optional] |
+| **x_mfa_password_authorization** | **string**| Must be filled only if AuthorizationErrors.MFA.AccessPasswordTokenRequired error code was returned previously. | [optional] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsPaymentRefundOperationModel**](../Model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel.md)
 
 ### Authorization
 
@@ -297,7 +302,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

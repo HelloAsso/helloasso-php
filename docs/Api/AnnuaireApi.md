@@ -13,7 +13,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `directoryFormsPost()`
 
 ```php
-directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request)
+directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel
 ```
 
 Récupérer les formulaires
@@ -42,7 +42,8 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $hello_asso_api_v5_common_models_directory_list_forms_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListFormsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListFormsRequest | Body which contains the filters to apply
 
 try {
-    $apiInstance->directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request);
+    $result = $apiInstance->directoryFormsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_forms_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnuaireApi->directoryFormsPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -58,7 +59,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableFormModel**](../Model/ResultsWithPaginationModelSynchronizableFormModel.md)
 
 ### Authorization
 
@@ -67,7 +68,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json-patch+json`, `application/json`, `text/json`, `application/*+json`
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -76,7 +77,7 @@ void (empty response body)
 ## `directoryOrganizationsPost()`
 
 ```php
-directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request)
+directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request): \OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel
 ```
 
 Récupérer les organisations
@@ -105,7 +106,8 @@ $continuation_token = 'continuation_token_example'; // string | Continuation Tok
 $hello_asso_api_v5_common_models_directory_list_organizations_request = new \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest(); // \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest | Body which contains the filters to apply
 
 try {
-    $apiInstance->directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request);
+    $result = $apiInstance->directoryOrganizationsPost($page_size, $continuation_token, $hello_asso_api_v5_common_models_directory_list_organizations_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnuaireApi->directoryOrganizationsPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -121,7 +123,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ResultsWithPaginationModelSynchronizableOrganizationModel**](../Model/ResultsWithPaginationModelSynchronizableOrganizationModel.md)
 
 ### Authorization
 
@@ -130,7 +132,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json-patch+json`, `application/json`, `text/json`, `application/*+json`
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

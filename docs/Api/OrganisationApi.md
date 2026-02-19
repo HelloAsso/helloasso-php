@@ -12,7 +12,7 @@ All URIs are relative to https://api.helloasso.com/v5, except if the operation d
 ## `organizationsOrganizationSlugGet()`
 
 ```php
-organizationsOrganizationSlugGet($organization_slug)
+organizationsOrganizationSlugGet($organization_slug): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel
 ```
 
 Obtenir le détail d'une organisation
@@ -39,7 +39,8 @@ $apiInstance = new OpenAPI\Client\Api\OrganisationApi(
 $organization_slug = 'organization_slug_example'; // string | The organization Slug
 
 try {
-    $apiInstance->organizationsOrganizationSlugGet($organization_slug);
+    $result = $apiInstance->organizationsOrganizationSlugGet($organization_slug);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organizationsOrganizationSlugGet: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,7 +54,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel**](../Model/HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel.md)
 
 ### Authorization
 
@@ -62,7 +63,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
