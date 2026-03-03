@@ -967,7 +967,8 @@ class CommandesApi
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
-        $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $contentType);
+        list($response) = $this->organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetWithHttpInfo($organization_slug, $form_slug, $form_type, $from, $to, $user_search_key, $page_index, $page_size, $continuation_token, $tier_types, $item_states, $tier_name, $with_details, $sort_order, $sort_field, $contentType);
+        return $response;
     }
 
     /**
@@ -1022,10 +1023,43 @@ class CommandesApi
 
             $statusCode = $response->getStatusCode();
 
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
+                        $request,
+                        $response,
+                    );
+            }
 
-            return [null, $statusCode, $response->getHeaders()];
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
+                $request,
+                $response,
+            );
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
             }
         
 
