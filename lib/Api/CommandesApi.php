@@ -961,9 +961,9 @@ class CommandesApi
      * @param  \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsEnumsSortField|null $sort_field Sort forms items by a specific field (Date or UpdateDate). Default is date (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'] to see the possible values for this operation
      *
+     * @return array of \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder, HTTP status code, HTTP response headers (array of strings)
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
+     * @throws \InvalidArgumentException     
      */
     public function organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet($organization_slug, $form_slug, $form_type, $from = null, $to = null, $user_search_key = null, $page_index = 1, $page_size = 20, $continuation_token = null, $tier_types = null, $item_states = null, $tier_name = null, $with_details = false, $sort_order = null, $sort_field = null, string $contentType = self::contentTypes['organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet'][0])
     {
