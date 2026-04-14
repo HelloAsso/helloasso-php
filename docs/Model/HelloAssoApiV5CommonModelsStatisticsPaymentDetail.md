@@ -1,9 +1,10 @@
-# # HelloAssoApiV5CommonModelsStatisticsPaymentDetail
+# HelloAssoApiV5CommonModelsStatisticsPaymentDetail
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**card_expiration_date** | **\DateTime** | Card expiration date (only for card payments) | [optional]
 **order** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderLight**](HelloAssoApiV5CommonModelsStatisticsOrderLight.md) |  | [optional]
 **payer** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPayer**](HelloAssoApiV5CommonModelsStatisticsPayer.md) |  | [optional]
 **items** | [**\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsPaymentItem[]**](HelloAssoApiV5CommonModelsStatisticsPaymentItem.md) | Items linked to this payment | [optional]

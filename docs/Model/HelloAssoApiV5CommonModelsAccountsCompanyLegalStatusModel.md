@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel
+# HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel
 
 ## Properties
 

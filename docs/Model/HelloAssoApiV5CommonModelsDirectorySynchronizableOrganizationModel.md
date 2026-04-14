@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel
+# HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel
 
 ## Properties
 

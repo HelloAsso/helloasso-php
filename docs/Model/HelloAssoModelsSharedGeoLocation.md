@@ -1,4 +1,4 @@
-# # HelloAssoModelsSharedGeoLocation
+# HelloAssoModelsSharedGeoLocation
 
 ## Properties
 

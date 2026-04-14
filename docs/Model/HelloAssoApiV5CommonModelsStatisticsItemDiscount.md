@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsItemDiscount
+# HelloAssoApiV5CommonModelsStatisticsItemDiscount
 
 ## Properties
 

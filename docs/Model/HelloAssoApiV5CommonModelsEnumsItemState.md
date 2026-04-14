@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsItemState
+# HelloAssoApiV5CommonModelsEnumsItemState
 
 ## Properties
 

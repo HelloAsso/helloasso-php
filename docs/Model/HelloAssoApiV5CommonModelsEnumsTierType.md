@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsTierType
+# HelloAssoApiV5CommonModelsEnumsTierType
 
 ## Properties
 

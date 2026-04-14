@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel
+# HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel
 
 ## Properties
 

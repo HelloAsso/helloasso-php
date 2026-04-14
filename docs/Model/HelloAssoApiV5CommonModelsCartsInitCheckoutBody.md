@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCartsInitCheckoutBody
+# HelloAssoApiV5CommonModelsCartsInitCheckoutBody
 
 ## Properties
 

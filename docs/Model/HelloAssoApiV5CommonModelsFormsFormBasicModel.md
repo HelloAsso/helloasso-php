@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsFormsFormBasicModel
+# HelloAssoApiV5CommonModelsFormsFormBasicModel
 
 ## Properties
 

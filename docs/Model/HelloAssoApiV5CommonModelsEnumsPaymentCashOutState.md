@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsPaymentCashOutState
+# HelloAssoApiV5CommonModelsEnumsPaymentCashOutState
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsPartnersPartnerPublicModel
+# HelloAssoApiV5CommonModelsPartnersPartnerPublicModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsItemCustomField
+# HelloAssoApiV5CommonModelsStatisticsItemCustomField
 
 ## Properties
 

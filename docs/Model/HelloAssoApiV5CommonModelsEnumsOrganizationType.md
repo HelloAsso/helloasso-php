@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsOrganizationType
+# HelloAssoApiV5CommonModelsEnumsOrganizationType
 
 ## Properties
 

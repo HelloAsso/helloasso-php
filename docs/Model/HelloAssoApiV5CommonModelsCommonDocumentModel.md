@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonDocumentModel
+# HelloAssoApiV5CommonModelsCommonDocumentModel
 
 ## Properties
 

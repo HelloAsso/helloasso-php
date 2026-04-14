@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse
+# HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse
 
 ## Properties
 

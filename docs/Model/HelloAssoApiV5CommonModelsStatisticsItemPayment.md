@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsItemPayment
+# HelloAssoApiV5CommonModelsStatisticsItemPayment
 
 ## Properties
 

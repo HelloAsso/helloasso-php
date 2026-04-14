@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel
+# HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel
 
 ## Properties
 
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **tags** | **string[]** | The public tags of the organization | [optional]
 **linked_partners** | **string[]** | Partners linked to this organization | [optional]
 **is_authenticated** | **bool** | The organization is authenticated. Property returned only when asked by an organization admin. | [optional]
+**display_coordinates** | **bool** | If the organization chose to display its coordinates. Property returned only when asked by an organization admin. | [optional]
 **is_cash_in_compliant** | **bool** | If transaction can be init on the organization or not. Property returned only when asked by an organization admin. | [optional]
 **banner** | **string** | The organization banner | [optional]
 **fiscal_receipt_eligibility** | **bool** | The organism can issue fiscal receipts (type ok and has not deactivated it)  Must configure it and be authenticated to become enabled | [optional]

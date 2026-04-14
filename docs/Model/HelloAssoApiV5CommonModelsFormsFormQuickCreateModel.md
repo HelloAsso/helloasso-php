@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsFormsFormQuickCreateModel
+# HelloAssoApiV5CommonModelsFormsFormQuickCreateModel
 
 ## Properties
 

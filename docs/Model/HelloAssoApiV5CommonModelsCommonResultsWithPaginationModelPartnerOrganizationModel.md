@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel
+# HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel
 
 ## Properties
 

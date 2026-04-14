@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsPayer
+# HelloAssoApiV5CommonModelsStatisticsPayer
 
 ## Properties
 

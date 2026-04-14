@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsPaymentRefundOperationModel
+# HelloAssoApiV5CommonModelsPaymentRefundOperationModel
 
 ## Properties
 

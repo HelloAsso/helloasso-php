@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentOperation
+# HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentOperation
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsDirectoryPartnerOrganizationModel
+# HelloAssoApiV5CommonModelsDirectoryPartnerOrganizationModel
 
 ## Properties
 

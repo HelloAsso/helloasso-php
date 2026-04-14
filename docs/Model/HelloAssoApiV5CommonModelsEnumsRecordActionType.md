@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsRecordActionType
+# HelloAssoApiV5CommonModelsEnumsRecordActionType
 
 ## Properties
 

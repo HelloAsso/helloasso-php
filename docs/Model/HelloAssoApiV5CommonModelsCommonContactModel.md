@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonContactModel
+# HelloAssoApiV5CommonModelsCommonContactModel
 
 ## Properties
 

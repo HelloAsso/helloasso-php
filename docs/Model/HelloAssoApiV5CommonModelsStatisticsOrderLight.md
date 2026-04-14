@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsOrderLight
+# HelloAssoApiV5CommonModelsStatisticsOrderLight
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions
+# HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions
 
 ## Properties
 

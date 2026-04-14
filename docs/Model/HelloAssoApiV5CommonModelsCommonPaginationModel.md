@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonPaginationModel
+# HelloAssoApiV5CommonModelsCommonPaginationModel
 
 ## Properties
 

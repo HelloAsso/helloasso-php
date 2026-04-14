@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsMembershipValidityType
+# HelloAssoApiV5CommonModelsEnumsMembershipValidityType
 
 ## Properties
 

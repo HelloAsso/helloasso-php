@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody
+# HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody
 
 ## Properties
 

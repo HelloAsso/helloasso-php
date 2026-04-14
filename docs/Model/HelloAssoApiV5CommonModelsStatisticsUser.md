@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsUser
+# HelloAssoApiV5CommonModelsStatisticsUser
 
 ## Properties
 

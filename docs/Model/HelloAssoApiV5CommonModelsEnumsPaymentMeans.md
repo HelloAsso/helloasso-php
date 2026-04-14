@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsPaymentMeans
+# HelloAssoApiV5CommonModelsEnumsPaymentMeans
 
 ## Properties
 

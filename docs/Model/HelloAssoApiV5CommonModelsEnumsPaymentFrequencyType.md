@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsPaymentFrequencyType
+# HelloAssoApiV5CommonModelsEnumsPaymentFrequencyType
 
 ## Properties
 

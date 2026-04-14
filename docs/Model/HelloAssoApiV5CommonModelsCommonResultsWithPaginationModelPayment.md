@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
+# HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment
 
 ## Properties
 

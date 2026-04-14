@@ -1,4 +1,4 @@
-# # HelloAssoApiV5ModelsPartnerStatisticsModel
+# HelloAssoApiV5ModelsPartnerStatisticsModel
 
 ## Properties
 

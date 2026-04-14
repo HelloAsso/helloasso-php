@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsSharePayment
+# HelloAssoApiV5CommonModelsStatisticsSharePayment
 
 ## Properties
 

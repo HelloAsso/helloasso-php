@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsFormsTierPublicModel
+# HelloAssoApiV5CommonModelsFormsTierPublicModel
 
 ## Properties
 

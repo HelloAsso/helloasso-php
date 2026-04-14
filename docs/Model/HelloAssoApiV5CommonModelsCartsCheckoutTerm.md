@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCartsCheckoutTerm
+# HelloAssoApiV5CommonModelsCartsCheckoutTerm
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsFieldType
+# HelloAssoApiV5CommonModelsEnumsFieldType
 
 ## Properties
 

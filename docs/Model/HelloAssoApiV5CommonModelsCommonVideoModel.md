@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonVideoModel
+# HelloAssoApiV5CommonModelsCommonVideoModel
 
 ## Properties
 

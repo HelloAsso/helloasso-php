@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsPaymentProviderType
+# HelloAssoApiV5CommonModelsEnumsPaymentProviderType
 
 ## Properties
 

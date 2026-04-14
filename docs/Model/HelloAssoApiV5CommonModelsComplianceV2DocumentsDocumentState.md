@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState
+# HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState
 
 ## Properties
 

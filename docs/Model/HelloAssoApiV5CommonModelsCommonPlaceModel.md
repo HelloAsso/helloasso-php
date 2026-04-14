@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonPlaceModel
+# HelloAssoApiV5CommonModelsCommonPlaceModel
 
 ## Properties
 

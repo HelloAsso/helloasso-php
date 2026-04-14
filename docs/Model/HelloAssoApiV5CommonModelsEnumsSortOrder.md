@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsSortOrder
+# HelloAssoApiV5CommonModelsEnumsSortOrder
 
 ## Properties
 

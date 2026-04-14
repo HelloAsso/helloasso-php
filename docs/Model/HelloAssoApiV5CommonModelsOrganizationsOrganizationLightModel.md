@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel
+# HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoModelsEnumsGlobalRole
+# HelloAssoModelsEnumsGlobalRole
 
 ## Properties
 

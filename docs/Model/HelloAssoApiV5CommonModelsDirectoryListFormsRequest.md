@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsDirectoryListFormsRequest
+# HelloAssoApiV5CommonModelsDirectoryListFormsRequest
 
 ## Properties
 

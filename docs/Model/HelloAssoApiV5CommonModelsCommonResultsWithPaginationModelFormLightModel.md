@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel
+# HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel
 
 ## Properties
 

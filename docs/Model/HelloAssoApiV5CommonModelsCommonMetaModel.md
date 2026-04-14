@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonMetaModel
+# HelloAssoApiV5CommonModelsCommonMetaModel
 
 ## Properties
 

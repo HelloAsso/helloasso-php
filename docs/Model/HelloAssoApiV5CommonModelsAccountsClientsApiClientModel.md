@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsAccountsClientsApiClientModel
+# HelloAssoApiV5CommonModelsAccountsClientsApiClientModel
 
 ## Properties
 

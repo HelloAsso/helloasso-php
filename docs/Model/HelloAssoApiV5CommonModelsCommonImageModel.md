@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsCommonImageModel
+# HelloAssoApiV5CommonModelsCommonImageModel
 
 ## Properties
 

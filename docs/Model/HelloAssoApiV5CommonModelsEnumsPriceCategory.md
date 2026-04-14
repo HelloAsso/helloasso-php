@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsPriceCategory
+# HelloAssoApiV5CommonModelsEnumsPriceCategory
 
 ## Properties
 

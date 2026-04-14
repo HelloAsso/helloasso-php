@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsShareItem
+# HelloAssoApiV5CommonModelsStatisticsShareItem
 
 ## Properties
 

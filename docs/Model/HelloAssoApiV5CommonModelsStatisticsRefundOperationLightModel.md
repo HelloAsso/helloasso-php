@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel
+# HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel
 
 ## Properties
 

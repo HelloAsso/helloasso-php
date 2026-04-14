@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsFormState
+# HelloAssoApiV5CommonModelsEnumsFormState
 
 ## Properties
 

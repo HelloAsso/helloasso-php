@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest
+# HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest
 
 ## Properties
 

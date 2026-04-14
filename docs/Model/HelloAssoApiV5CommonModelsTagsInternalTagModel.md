@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsTagsInternalTagModel
+# HelloAssoApiV5CommonModelsTagsInternalTagModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsFormsTierLightModel
+# HelloAssoApiV5CommonModelsFormsTierLightModel
 
 ## Properties
 

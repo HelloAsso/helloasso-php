@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel
+# HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel
 
 ## Properties
 

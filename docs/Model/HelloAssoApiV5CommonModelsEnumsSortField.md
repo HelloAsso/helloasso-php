@@ -1,4 +1,4 @@
-# # HelloAssoApiV5CommonModelsEnumsSortField
+# HelloAssoApiV5CommonModelsEnumsSortField
 
 ## Properties
 
