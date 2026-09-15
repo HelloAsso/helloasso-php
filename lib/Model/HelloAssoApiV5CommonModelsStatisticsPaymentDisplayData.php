@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5CommonModelsCommonDocumentModel
+ * HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData
  *
  * PHP version 8.1
  *
@@ -32,16 +32,15 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5CommonModelsCommonDocumentModel Class Doc Comment
+ * HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData Class Doc Comment
  *
  * @category Class
- * @description DocumentModel class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, ArrayAccess, \JsonSerializable
+class HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      *
      * @var string
      */
-    protected static $openAPIModelName = 'HelloAsso.Api.V5.Common.Models.Common.DocumentModel';
+    protected static $openAPIModelName = 'HelloAsso.Api.V5.Common.Models.Statistics.PaymentDisplayData';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +57,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @var string[]
      */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'file_name' => 'string',
-        'public_url' => 'string',
-        'state' => '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState'
+        'form_display_type' => '\OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsFormDisplayType',
+        'is_tap_to_pay' => 'bool'
     ];
 
     /**
@@ -72,10 +69,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'id' => 'int32',
-        'file_name' => null,
-        'public_url' => null,
-        'state' => null
+        'form_display_type' => null,
+        'is_tap_to_pay' => null
     ];
 
     /**
@@ -84,10 +79,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'id' => true,
-        'file_name' => true,
-        'public_url' => true,
-        'state' => false
+        'form_display_type' => false,
+        'is_tap_to_pay' => false
     ];
 
     /**
@@ -176,10 +169,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'file_name' => 'fileName',
-        'public_url' => 'publicUrl',
-        'state' => 'state'
+        'form_display_type' => 'formDisplayType',
+        'is_tap_to_pay' => 'isTapToPay'
     ];
 
     /**
@@ -188,10 +179,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'file_name' => 'setFileName',
-        'public_url' => 'setPublicUrl',
-        'state' => 'setState'
+        'form_display_type' => 'setFormDisplayType',
+        'is_tap_to_pay' => 'setIsTapToPay'
     ];
 
     /**
@@ -200,10 +189,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'file_name' => 'getFileName',
-        'public_url' => 'getPublicUrl',
-        'state' => 'getState'
+        'form_display_type' => 'getFormDisplayType',
+        'is_tap_to_pay' => 'getIsTapToPay'
     ];
 
     /**
@@ -263,10 +250,8 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('file_name', $data ?? [], null);
-        $this->setIfExists('public_url', $data ?? [], null);
-        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('form_display_type', $data ?? [], null);
+        $this->setIfExists('is_tap_to_pay', $data ?? [], null);
     }
 
     /**
@@ -312,130 +297,55 @@ class HelloAssoApiV5CommonModelsCommonDocumentModel implements ModelInterface, A
 
 
     /**
-     * Gets id
+     * Gets form_display_type
      *
-     * @return int|null
+     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsFormDisplayType|null
      */
-    public function getId()
+    public function getFormDisplayType()
     {
-        return $this->container['id'];
+        return $this->container['form_display_type'];
     }
 
     /**
-     * Sets id
+     * Sets form_display_type
      *
-     * @param int|null $id id
+     * @param \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsFormDisplayType|null $form_display_type form_display_type
      *
      * @return self
      */
-    public function setId($id)
+    public function setFormDisplayType($form_display_type)
     {
-        if (is_null($id)) {
-            array_push($this->openAPINullablesSetToNull, 'id');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('id', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($form_display_type)) {
+            throw new \InvalidArgumentException('non-nullable form_display_type cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['form_display_type'] = $form_display_type;
 
         return $this;
     }
 
     /**
-     * Gets file_name
+     * Gets is_tap_to_pay
      *
-     * @return string|null
+     * @return bool|null
      */
-    public function getFileName()
+    public function getIsTapToPay()
     {
-        return $this->container['file_name'];
+        return $this->container['is_tap_to_pay'];
     }
 
     /**
-     * Sets file_name
+     * Sets is_tap_to_pay
      *
-     * @param string|null $file_name The file name of document
+     * @param bool|null $is_tap_to_pay Whether or not the payment was made using tap to pay.
      *
      * @return self
      */
-    public function setFileName($file_name)
+    public function setIsTapToPay($is_tap_to_pay)
     {
-        if (is_null($file_name)) {
-            array_push($this->openAPINullablesSetToNull, 'file_name');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('file_name', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($is_tap_to_pay)) {
+            throw new \InvalidArgumentException('non-nullable is_tap_to_pay cannot be null');
         }
-        $this->container['file_name'] = $file_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets public_url
-     *
-     * @return string|null
-     */
-    public function getPublicUrl()
-    {
-        return $this->container['public_url'];
-    }
-
-    /**
-     * Sets public_url
-     *
-     * @param string|null $public_url The public url of document
-     *
-     * @return self
-     */
-    public function setPublicUrl($public_url)
-    {
-        if (is_null($public_url)) {
-            array_push($this->openAPINullablesSetToNull, 'public_url');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('public_url', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['public_url'] = $public_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets state
-     *
-     * @return \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState|null
-     */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-     * Sets state
-     *
-     * @param \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState|null $state state
-     *
-     * @return self
-     */
-    public function setState($state)
-    {
-        if (is_null($state)) {
-            throw new \InvalidArgumentException('non-nullable state cannot be null');
-        }
-        $this->container['state'] = $state;
+        $this->container['is_tap_to_pay'] = $is_tap_to_pay;
 
         return $this;
     }

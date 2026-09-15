@@ -139,7 +139,7 @@ void (empty response body)
 ## `ordersOrderIdGet()`
 
 ```php
-ordersOrderIdGet($order_id, $with_form_data): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail
+ordersOrderIdGet($order_id, $with_form_data, $check_payments_refund_eligibility): \OpenAPI\Client\Model\HelloAssoApiV5CommonModelsStatisticsOrderDetail
 ```
 
 Obtenir des informations détaillées sur une commande
@@ -165,9 +165,10 @@ $apiInstance = new OpenAPI\Client\Api\CommandesApi(
 );
 $order_id = 56; // int | The order ID
 $with_form_data = false; // bool | Set to true to include form data in the response
+$check_payments_refund_eligibility = false; // bool | Set to true to check if payments are eligible to refund or not
 
 try {
-    $result = $apiInstance->ordersOrderIdGet($order_id, $with_form_data);
+    $result = $apiInstance->ordersOrderIdGet($order_id, $with_form_data, $check_payments_refund_eligibility);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommandesApi->ordersOrderIdGet: ', $e->getMessage(), PHP_EOL;
@@ -180,6 +181,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **int**| The order ID | |
 | **with_form_data** | **bool**| Set to true to include form data in the response | [optional] [default to false] |
+| **check_payments_refund_eligibility** | **bool**| Set to true to check if payments are eligible to refund or not | [optional] [default to false] |
 
 ### Return type
 

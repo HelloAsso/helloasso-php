@@ -1,6 +1,6 @@
 <?php
 /**
- * HelloAssoApiV5CommonModelsEnumsPaymentProviderType
+ * HelloAssoApiV5CommonModelsStatisticsFormDisplayType
  *
  * PHP version 8.1
  *
@@ -30,26 +30,36 @@ namespace OpenAPI\Client\Model;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * HelloAssoApiV5CommonModelsEnumsPaymentProviderType Class Doc Comment
+ * HelloAssoApiV5CommonModelsStatisticsFormDisplayType Class Doc Comment
  *
  * @category Class
- * @description The payment provider type.
+ * @description Extended FormType enum for display purpose.  Adds Other and Sale (tap to pay values) to the FormType enum.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class HelloAssoApiV5CommonModelsEnumsPaymentProviderType
+class HelloAssoApiV5CommonModelsStatisticsFormDisplayType
 {
     /**
      * Possible values of this enum
      */
-    public const LEMONWAY = 'Lemonway';
+    public const CROWD_FUNDING = 'CrowdFunding';
 
-    public const STRIPE = 'Stripe';
+    public const MEMBERSHIP = 'Membership';
 
-    public const STRIPE_V2 = 'StripeV2';
+    public const EVENT = 'Event';
 
-    public const HA_PAY = 'HaPay';
+    public const DONATION = 'Donation';
+
+    public const PAYMENT_FORM = 'PaymentForm';
+
+    public const CHECKOUT = 'Checkout';
+
+    public const SHOP = 'Shop';
+
+    public const OTHER = 'Other';
+
+    public const SALE = 'Sale';
 
     /**
      * Gets allowable values of the enum
@@ -58,10 +68,15 @@ class HelloAssoApiV5CommonModelsEnumsPaymentProviderType
     public static function getAllowableEnumValues()
     {
         return [
-            self::LEMONWAY,
-            self::STRIPE,
-            self::STRIPE_V2,
-            self::HA_PAY
+            self::CROWD_FUNDING,
+            self::MEMBERSHIP,
+            self::EVENT,
+            self::DONATION,
+            self::PAYMENT_FORM,
+            self::CHECKOUT,
+            self::SHOP,
+            self::OTHER,
+            self::SALE
         ];
     }
 }
